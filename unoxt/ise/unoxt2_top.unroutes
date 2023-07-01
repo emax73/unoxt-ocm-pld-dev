@@ -1,0 +1,52 @@
+Release 14.7 - par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Fri Jun 30 11:33:27 2023
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 40 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   btn_multiface_n_i_IBUF
+   ear_port_i_IBUF
+   esp_rx_i_IBUF
+   flash_miso_i_IBUF
+   joyp1_i_IBUF
+   joyp2_i_IBUF
+   joyp3_i_IBUF
+   joyp4_i_IBUF
+   joyp6_i_IBUF
+   joyp9_i_IBUF
+   msxpp/U01/u0/Regs/Mram_RegsH11_RAMD_D1_O
+   msxpp/U01/u0/Regs/Mram_RegsL11_RAMD_D1_O
+   msxpp/U20/U_SPRITE/ISPINFORAM/Mram_IMEM1_RAMD_D1_O
+   msxpp/U20/U_SPRITE/ISPINFORAM/Mram_IMEM2_RAMD_D1_O
+   msxpp/U20/U_SPRITE/ISPINFORAM/Mram_IMEM3_RAMD_D1_O
+   msxpp/U20/U_SPRITE/ISPINFORAM/Mram_IMEM4_RAMD_D1_O
+   msxpp/U20/U_SPRITE/ISPINFORAM/Mram_IMEM5_RAMD_D1_O
+   msxpp/U32/U1/og/Fmem/Mram_data_array10_RAMA_DPO
+   msxpp/U32/U1/og/Fmem/Mram_data_array10_RAMB_DPO
+   msxpp/U32/U1/og/Fmem/Mram_data_array10_RAMD_O
+   ps2_pin2_io_IBUF
+   ps2_pin6_io_IBUF
+   ram_data_io<0>_IBUF
+   ram_data_io<10>_IBUF
+   ram_data_io<11>_IBUF
+   ram_data_io<12>_IBUF
+   ram_data_io<13>_IBUF
+   ram_data_io<14>_IBUF
+   ram_data_io<15>_IBUF
+   ram_data_io<1>_IBUF
+   ram_data_io<2>_IBUF
+   ram_data_io<3>_IBUF
+   ram_data_io<4>_IBUF
+   ram_data_io<5>_IBUF
+   ram_data_io<6>_IBUF
+   ram_data_io<7>_IBUF
+   ram_data_io<8>_IBUF
+   ram_data_io<9>_IBUF
+   sd_d1_i_IBUF
+   sd_d2_i_IBUF
+
+

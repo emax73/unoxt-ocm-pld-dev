@@ -158,7 +158,7 @@ architecture Behavior of wifi is
 
 begin
 
-    U1 : work.UART
+	 U1 : work.UART
     port map
     (
         uart_prescaler_i    => std_logic_vector( to_unsigned(25, 14) ), -- 21477272 / 859372 = 25
@@ -172,7 +172,7 @@ begin
         clock_i             => clk_i
     );
 
-    U2 : work.FIFO
+	 U2 : work.FIFO
     generic map
     (
         FIFO_DEPTH          => 2080

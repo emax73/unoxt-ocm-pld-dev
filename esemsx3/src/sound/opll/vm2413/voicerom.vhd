@@ -43,7 +43,10 @@ end VoiceRom;
 
 architecture RTL of VoiceRom is
 
-  type VOICE_ARRAY_TYPE is array (VOICE_ID_TYPE'range) of VOICE_VECTOR_TYPE;
+--Max
+--  type VOICE_ARRAY_TYPE is array (VOICE_ID_TYPE'range) of VOICE_VECTOR_TYPE;
+  type VOICE_ARRAY_TYPE is array (0 to 37) of VOICE_VECTOR_TYPE;
+  
   constant voices : VOICE_ARRAY_TYPE := (
 -- APEK<ML>KL< TL >W<F><AR><DR><SL><RR>
   "000000000000000000000000000000000000", -- @0(M)

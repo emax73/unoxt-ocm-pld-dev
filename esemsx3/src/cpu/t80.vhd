@@ -247,6 +247,9 @@ architecture rtl of T80 is
     signal IMode            : std_logic_vector(1 downto 0);
     signal Halt             : std_logic;
     signal XYbit_undoc      : std_logic;
+	 
+	 --Max
+	 signal flag_s_signal	:	std_logic_vector(7 downto 0); 
 
 begin
 
@@ -637,8 +640,12 @@ begin
                         F(Flag_P) <= IntE_FF2;
                         F(Flag_N) <= '0';                           -- Added by t.hara, 2022/Nov/05th
                         F(Flag_H) <= '0';                           -- Added by t.hara, 2022/Nov/05th
-                        F(Flag_S) <= std_logic_vector(R)(7);        -- Added by t.hara, 2022/Nov/05th
-                        if std_logic_vector(R) = "00000000" then    -- Added by t.hara, 2022/Nov/05th
+                        --Max
+								--F(Flag_S) <= std_logic_vector(R)(7);        -- Added by t.hara, 2022/Nov/05th
+								flag_s_signal <= std_logic_vector(R);
+								F(Flag_S) <= flag_s_signal(7);        -- Added by t.hara, 2022/Nov/05th
+                        
+								if std_logic_vector(R) = "00000000" then    -- Added by t.hara, 2022/Nov/05th
                             F(Flag_Z) <= '1';
                         else
                             F(Flag_Z) <= '0';

@@ -128,8 +128,11 @@ architecture rtl of controller is
     end component;
 
     -- the array which caches instrument number of each channel.
-    type inst_array is array (ch_type'range) of integer range 0 to 15;
-    signal inst_cache : inst_array;
+    --Max
+	 --type inst_array is array (ch_type'range) of integer range 0 to 15;
+	 type inst_array is array (0 to 8) of integer range 0 to 15;
+    
+	 signal inst_cache : inst_array;
 
     type kl_array is array (0 to 15) of std_logic_vector(5 downto 0);
     constant kl_table : kl_array := (
@@ -161,7 +164,7 @@ architecture rtl of controller is
 
 begin   -- rtl
 
-    --  レジスタ設定値を保持するためのメモリ
+    --  
     u_register_memory : RegisterMemory
     port map (
         clk     => clk,
@@ -176,7 +179,7 @@ begin   -- rtl
         clk, reset, user_voice_wdata, user_voice_wr, user_voice_addr, slot_voice_addr,
         user_voice_rdata, slot_voice_data );
 
-    --  レジスタアドレスラッチ (第１ステージ)
+    --   ()
     process( reset, clk )
     begin
         if( reset = '1' )then
@@ -192,7 +195,7 @@ begin   -- rtl
         end if;
     end process;
 
-    --  現在のスロットの音色データ読み出しアドレスラッチ (第１ステージ)
+    --   ()
     process( reset, clk )
     begin
         if( reset = '1' )then
@@ -201,7 +204,7 @@ begin   -- rtl
             if clkena='1' then
                 if( stage = "00" )then
                     if( rflag(5) = '1' and w_channel >= "0110" )then
-                        --  リズムモードで ch6 以降
+                        --   ch6 
                         slot_voice_addr <= conv_integer(slot) - 12 + 32;
                     else
                         slot_voice_addr <= inst_cache(conv_integer(slot)/2) * 2 + conv_integer(slot) mod 2;
@@ -342,6 +345,11 @@ begin   -- rtl
                                     user_voice_tmp.rr := data(3 downto 0);
                                     user_voice_wr <= '1';
                                 end if;
+										  
+									--Max
+									when others =>
+										null;
+
                         end case;
 
                         user_voice_wdata <= user_voice_tmp;
@@ -359,16 +367,16 @@ begin   -- rtl
                         if( conv_integer(addr(3 downto 0) ) = conv_integer(slot) / 2 ) then
                             regs_tmp := regs_rdata;
                             case addr( 5 downto 4 ) is
-                                when "01" => -- 10h～18h の場合（下位 F-Number）
+                                when "01" => -- 10h18h  F-Number
                                     regs_tmp(7 downto 0) := data;               --  F-Number
                                     regs_wr <= '1';
-                                when "10" => -- 20h～28h の場合（Sus, Key, Block, F-Number MSB）
+                                when "10" => -- 20h28h Sus, Key, Block, F-Number MSB
                                     regs_tmp(13) := data(5);                    --  Sus
                                     regs_tmp(12) := data(4);                    --  Key
                                     regs_tmp(11 downto 9) := data(3 downto 1);  --  Block
                                     regs_tmp(8) := data(0);                     --  F-Number
                                     regs_wr <= '1';
-                                when "11" => -- 30h～38h の場合（Inst, Vol）
+                                when "11" => -- 30h38h Inst, Vol
                                     regs_tmp(23 downto 20) := data(7 downto 4); --  Inst
                                     regs_tmp(19 downto 16) := data(3 downto 0); --  Vol
                                     regs_wr <='1';
@@ -503,6 +511,10 @@ begin   -- rtl
                         rr  <= slot_voice_data.rr;
                     end if;
                 end if;
+				--Max
+				when others =>
+                null;
+
 
             end case;
 

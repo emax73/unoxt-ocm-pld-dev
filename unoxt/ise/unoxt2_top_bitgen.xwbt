@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/ise/unoxt2_top.ncd
+OUTFILE=/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/ise/unoxt2_top.bit
+FAMILY=Spartan6
+PART=xc6slx25-2ftg256
+WORKINGDIR=/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/ise
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

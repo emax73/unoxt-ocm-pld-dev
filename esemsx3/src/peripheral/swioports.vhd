@@ -392,7 +392,10 @@ begin
                                     when "10"   =>  io42_id212(2 downto 1)  <=  "01";   --  RGB     to  VGA
                                     when "01"   =>  io42_id212(2)           <=  '1';    --  VGA     to  VGA+
                                     when "11"   =>  io42_id212(2 downto 1)  <=  "00";   --  VGA+    to  Y/C
-                                end case;
+                                		--Max
+												when others => null;
+
+										  end case;
                             end if;
                         end if;
                         if( io43_id212(2) = '0' )then                           -- BIT[2]=0     of  Lock Mask
@@ -459,7 +462,10 @@ begin
                                     when "01"   =>  io42_id212(2 downto 1)  <=  "10";   --  VGA     to  RGB
                                     when "10"   =>  io42_id212(2)           <=  '0';    --  RGB     to  Y/C
                                     when "00"   =>  io42_id212(2 downto 1)  <=  "11";   --  Y/C     to  VGA+
-                                end case;
+                                		--Max
+												when others =>  null;
+
+										  end case;
                             end if;
                         end if;
                         if( io43_id212(2) = '0' )then                           -- BIT[2]=0     of  Lock Mask
@@ -499,7 +505,10 @@ begin
                                     when "10"   =>  io42_id212(5 downto 4)  <=  "01";   --  INTERNAL ASCII 8K   to  INTERNAL SCC-I(B)
                                     when "01"   =>  io42_id212(5)           <=  '1';    --  INTERNAL SCC-I(B)   to  INTERNAL ASCII 16K
                                     when "11"   =>  io42_id212(5 downto 4)  <=  "00";   --  INTERNAL ASCII 16K  to  EXTERNAL SLOT2
-                                end case;
+												--Max
+												when others =>  null;
+                              
+										end case;
                                 iSlt2_linear    <=  '0';
                             end if;                                             -- Hint! You can get SCC-I(B) quickly with a SHIFT+'double'SCRLK
                         end if;

@@ -52,6 +52,8 @@ entity emsx_top is
         pClk21m         : in    std_logic;                                      -- VDP Clock ... 21.48MHz
         pExtClk         : in    std_logic;                                      -- Reserved (for multi FPGAs)
         pCpuClk         : out   std_logic;                                      -- CPU Clock ... 3.58MHz (up to 10.74MHz/21.48MHz)
+		  --Max
+		  pSysClk			: out	  std_logic;
 
         -- MSX cartridge slot ports
         pSltClk         : in    std_logic;                                      -- pCpuClk returns here, for Z80, etc.
@@ -104,10 +106,15 @@ entity emsx_top is
         pStrB           : out   std_logic;
 
         -- SD/MMC slot ports
-        pSd_Ck          : out   std_logic;                                      -- pin 5
-        pSd_Cm          : out   std_logic;                                      -- pin 2
-        pSd_Dt          : inout std_logic_vector(  3 downto 0 );                -- pin 1(D3), 9(D2), 8(D1), 7(D0)
-
+        --Max
+		  --pSd_Ck          : out   std_logic;                                      -- pin 5
+        --pSd_Cm          : out   std_logic;                                      -- pin 2
+        --pSd_Dt          : inout std_logic_vector(  3 downto 0 );                -- pin 1(D3), 9(D2), 8(D1), 7(D0)
+		  pSd_cs				: out	std_logic;	
+		  pSd_sclk			: out	std_logic;	
+		  pSd_mosi			: out	std_logic;	
+		  pSd_miso			: in	std_logic;	
+			
         -- DIP switch, Lamp ports
         pDip            : in    std_logic_vector(  7 downto 0 );                -- 0=On, 1=Off (default on shipment)
         pLed            : out   std_logic_vector(  7 downto 0 );                -- 0=Off, 1=On (green)
@@ -2216,7 +2223,9 @@ begin
     end process;
 
     -- left audio channel
-    pDac_SL <= null                                         when( power_on_reset = '0' )else
+    --Max
+	 --pDac_SL <= null                                         when( power_on_reset = '0' )else
+    pDac_SL <= "ZZZZZZ"                                         when( power_on_reset = '0' )else
                "ZZZZZZ"                                     when( pseudoStereo = '1' and (CmtScro = '0' or portF4_mode = '1') )else
                DACout & "ZZZZ" & DACout;                    -- multiple DACout lines are used to balance the audio cartridges on Cyclone I machines
 
@@ -2626,6 +2635,9 @@ begin
             c1       => memclk,                 -- 85.92MHz = 21.48MHz x 4
             e0       => pMemClk                 -- 85.92MHz external
         );
+		  
+	 --Max
+	pSysClk <= clk21m;
 
     U01 : t80a
         port map(
@@ -2665,11 +2677,17 @@ begin
             mmcdbi      => MmcDbi              ,
             mmcena      => MmcEna              ,
             mmcact      => MmcAct              ,
-            mmc_ck      => pSd_Ck              ,
-            mmc_cs      => pSd_Dt(3)           ,
-            mmc_di      => pSd_Cm              ,
-            mmc_do      => pSd_Dt(0)           ,
-            epc_ck      => EPC_CK              ,
+            --Max
+				--mmc_ck      => pSd_Ck              ,
+            --mmc_cs      => pSd_Dt(3)           ,
+            --mmc_di      => pSd_Cm              ,
+            --mmc_do      => pSd_Dt(0)           ,
+				mmc_ck      => pSd_sclk              ,
+            mmc_cs      => pSd_cs		          ,
+            mmc_di      => pSd_mosi              ,
+            mmc_do      => pSd_miso	             ,
+            
+				epc_ck      => EPC_CK              ,
             epc_cs      => EPC_CS              ,
             epc_oe      => EPC_OE              ,
             epc_di      => EPC_DI              ,
@@ -2677,10 +2695,12 @@ begin
             debug       => open
         );
 
-    pSd_Dt(  2 downto 0 ) <= (others => 'Z');
+    --Max
+	 --pSd_Dt(  2 downto 0 ) <= (others => 'Z');
 
-    U04 : cyclone_asmiblock
-        port map(EPC_CK, EPC_CS, EPC_DI, EPC_OE, EPC_DO);
+    --Max
+	 --U04 : cyclone_asmiblock
+    --    port map(EPC_CK, EPC_CS, EPC_DI, EPC_OE, EPC_DO);
 
     U05 : mapper
         port map(clk21m, reset, clkena, MapReq, open, mem, wrt, adr, MapDbi, dbo,
@@ -2881,40 +2901,41 @@ begin
 
     tr_pcm_wave_in <= (others => '0');
 
-    uwifi : work.wifi
-        port map(
-            clk_i           => clk21m,
-            wait_o          => esp_wait_s,
-            reset_i         => xSltRst_n,           -- swioRESET_n was purposely excluded here
-            iorq_i          => iSltIorq_n,
-            wrt_i           => xSltWr_n,
-            rd_i            => xSltRd_n,
-            tx_i            => esp_tx_i,
-            rx_o            => esp_rx_o,
-            adr_i           => adr,
-            db_i            => dbo,
-            db_o            => esp_dout_s
-        );
+    --Max
+	 --uwifi : work.wifi
+    --    port map(
+    --        clk_i           => clk21m,
+    --        wait_o          => esp_wait_s,
+    --        reset_i         => xSltRst_n,           -- swioRESET_n was purposely excluded here
+    --        iorq_i          => iSltIorq_n,
+    --        wrt_i           => xSltWr_n,
+    --        rd_i            => xSltRd_n,
+    --        tx_i            => esp_tx_i,
+    --        rx_o            => esp_rx_o,
+    --        adr_i           => adr,
+    --        db_i            => dbo,
+    --        db_o            => esp_dout_s
+    --    );
 
-    esp_tx_i <= pUsbP1;
-    pUsbN1 <= esp_rx_o;
+    --esp_tx_i <= pUsbP1;
+    --pUsbN1 <= esp_rx_o;
 
-    midi : if use_midi_g generate
-      umidi : work.midi
-          port map(
-              clk_i         => clk21m,
-              reset_i       => (not reset),
-              iorq_i        => iSltIorq_n,
-              wrt_i         => xSltWr_n,
-              rd_i          => xSltRd_n,
-              tx_i          => '0',
-              rx_o          => midi_o,            -- module output pin
-              adr_i         => adr,
-              db_i          => dbo,
-              db_o          => midi_dout_s,
-              tx_active_o   => midi_active_o
-          );
-    end generate;
+    --midi : if use_midi_g generate
+    --  umidi : work.midi
+    --      port map(
+    --          clk_i         => clk21m,
+    --          reset_i       => (not reset),
+    --          iorq_i        => iSltIorq_n,
+    --          wrt_i         => xSltWr_n,
+    --          rd_i          => xSltRd_n,
+    --          tx_i          => '0',
+    --          rx_o          => midi_o,            -- module output pin
+    --          adr_i         => adr,
+    --          db_i          => dbo,
+    --          db_o          => midi_dout_s,
+    --          tx_active_o   => midi_active_o
+    --      );
+    --end generate;
 
     pJoyB(0) <= midi_o when( midi_active_o = '1' and use_midi_g )else
                 'Z';

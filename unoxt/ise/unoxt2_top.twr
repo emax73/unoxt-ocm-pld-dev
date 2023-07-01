@@ -1,0 +1,1911 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -filter
+/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/ise/iseconfig/filter.filter
+-intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml unoxt2_top.twx unoxt2_top.ncd -o
+unoxt2_top.twr unoxt2_top.pcf
+
+Design file:              unoxt2_top.ncd
+Physical constraint file: unoxt2_top.pcf
+Device,package,speed:     xc6slx25,ftg256,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk50 = PERIOD TIMEGRP "clock_50_i" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   5.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk50 = PERIOD TIMEGRP "clock_50_i" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 10.615ns (period - min period limit)
+  Period: 11.667ns
+  Min period limit: 1.052ns (950.570MHz) (Tpllper_CLKOUT(Foutmax))
+  Physical resource: msxpp/U00/pll_base_inst/PLL_ADV/CLKOUT1
+  Logical resource: msxpp/U00/pll_base_inst/PLL_ADV/CLKOUT1
+  Location pin: PLL_ADV_X0Y0.CLKOUT1
+  Clock network: msxpp/U00/clkout1
+--------------------------------------------------------------------------------
+Slack: 15.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 2.500ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: msxpp/U00/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: msxpp/U00/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN1
+  Clock network: msxpp/U00/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 15.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 2.500ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: msxpp/U00/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: msxpp/U00/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN1
+  Clock network: msxpp/U00/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_msxpp_U00_clkout1 = PERIOD TIMEGRP "msxpp_U00_clkout1" 
+TS_clk50 /         1.71428571 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 11670 paths analyzed, 426 endpoints analyzed, 186 failing endpoints
+ 186 timing errors detected. (186 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is 106055.608ns.
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/SdrSta_0 (SLICE_X44Y29.A5), 490 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -9.090ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/iSltAdr_4 (FF)
+  Destination:          msxpp/SdrSta_0 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      8.438ns (Levels of Logic = 11)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.379ns (1.858 - 2.237)
+  Source Clock:         sysclk rising at 285739.999ns
+  Destination Clock:    msxpp/memclk rising at 285740.000ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/iSltAdr_4 to msxpp/SdrSta_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y26.AQ      Tcko                  0.430   msxpp/iSltAdr<7>
+                                                       msxpp/iSltAdr_4
+    SLICE_X42Y25.D2      net (fanout=15)       1.148   msxpp/iSltAdr<4>
+    SLICE_X42Y25.D       Tilo                  0.254   msxpp/ExpDec
+                                                       msxpp/adr[15]_PWR_8_o_equal_154_o<15>11
+    SLICE_X42Y25.C5      net (fanout=4)        0.434   msxpp/adr[15]_PWR_8_o_equal_154_o<15>1
+    SLICE_X42Y25.C       Tilo                  0.255   msxpp/ExpDec
+                                                       msxpp/adr[15]_PWR_8_o_equal_154_o<15>2
+    SLICE_X42Y25.B4      net (fanout=8)        0.318   msxpp/U31_1/Dec1FFE
+    SLICE_X42Y25.B       Tilo                  0.254   msxpp/ExpDec
+                                                       msxpp/adr[15]_PWR_8_o_equal_154_o<15>1
+    SLICE_X42Y26.A5      net (fanout=4)        0.451   msxpp/adr[15]_PWR_8_o_equal_154_o
+    SLICE_X42Y26.A       Tilo                  0.254   msxpp/PpiPortA<3>
+                                                       msxpp/Mmux_iSltMap14
+    SLICE_X43Y27.A3      net (fanout=22)       0.581   msxpp/iSltMap
+    SLICE_X43Y27.A       Tilo                  0.259   msxpp/PpiPortA<7>
+                                                       msxpp/Mmux_MapReq11
+    SLICE_X43Y27.B5      net (fanout=3)        0.448   msxpp/MapReq
+    SLICE_X43Y27.BMUX    Tilo                  0.337   msxpp/PpiPortA<7>
+                                                       msxpp/RamReq1
+    SLICE_X43Y28.B5      net (fanout=1)        0.417   msxpp/RamReq1
+    SLICE_X43Y28.B       Tilo                  0.259   msxpp/Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT12_5
+                                                       msxpp/RamReq10
+    SLICE_X43Y28.A5      net (fanout=1)        0.230   msxpp/RamReq11
+    SLICE_X43Y28.A       Tilo                  0.259   msxpp/Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT12_5
+                                                       msxpp/RamReq15
+    SLICE_X43Y28.D3      net (fanout=3)        0.409   msxpp/RamReq
+    SLICE_X43Y28.D       Tilo                  0.259   msxpp/Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT12_5
+                                                       msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT13
+    SLICE_X43Y28.C6      net (fanout=1)        0.143   msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT12
+    SLICE_X43Y28.C       Tilo                  0.259   msxpp/Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT12_5
+                                                       msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT14
+    SLICE_X44Y29.A5      net (fanout=1)        0.431   msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT13
+    SLICE_X44Y29.CLK     Tas                   0.349   msxpp/SdrSta<0>
+                                                       msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT16
+                                                       msxpp/SdrSta_0
+    -------------------------------------------------  ---------------------------
+    Total                                      8.438ns (3.428ns logic, 5.010ns route)
+                                                       (40.6% logic, 59.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.772ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/iSltAdr_5 (FF)
+  Destination:          msxpp/SdrSta_0 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      8.120ns (Levels of Logic = 11)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.379ns (1.858 - 2.237)
+  Source Clock:         sysclk rising at 285739.999ns
+  Destination Clock:    msxpp/memclk rising at 285740.000ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/iSltAdr_5 to msxpp/SdrSta_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y26.BQ      Tcko                  0.430   msxpp/iSltAdr<7>
+                                                       msxpp/iSltAdr_5
+    SLICE_X42Y25.D4      net (fanout=19)       0.830   msxpp/iSltAdr<5>
+    SLICE_X42Y25.D       Tilo                  0.254   msxpp/ExpDec
+                                                       msxpp/adr[15]_PWR_8_o_equal_154_o<15>11
+    SLICE_X42Y25.C5      net (fanout=4)        0.434   msxpp/adr[15]_PWR_8_o_equal_154_o<15>1
+    SLICE_X42Y25.C       Tilo                  0.255   msxpp/ExpDec
+                                                       msxpp/adr[15]_PWR_8_o_equal_154_o<15>2
+    SLICE_X42Y25.B4      net (fanout=8)        0.318   msxpp/U31_1/Dec1FFE
+    SLICE_X42Y25.B       Tilo                  0.254   msxpp/ExpDec
+                                                       msxpp/adr[15]_PWR_8_o_equal_154_o<15>1
+    SLICE_X42Y26.A5      net (fanout=4)        0.451   msxpp/adr[15]_PWR_8_o_equal_154_o
+    SLICE_X42Y26.A       Tilo                  0.254   msxpp/PpiPortA<3>
+                                                       msxpp/Mmux_iSltMap14
+    SLICE_X43Y27.A3      net (fanout=22)       0.581   msxpp/iSltMap
+    SLICE_X43Y27.A       Tilo                  0.259   msxpp/PpiPortA<7>
+                                                       msxpp/Mmux_MapReq11
+    SLICE_X43Y27.B5      net (fanout=3)        0.448   msxpp/MapReq
+    SLICE_X43Y27.BMUX    Tilo                  0.337   msxpp/PpiPortA<7>
+                                                       msxpp/RamReq1
+    SLICE_X43Y28.B5      net (fanout=1)        0.417   msxpp/RamReq1
+    SLICE_X43Y28.B       Tilo                  0.259   msxpp/Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT12_5
+                                                       msxpp/RamReq10
+    SLICE_X43Y28.A5      net (fanout=1)        0.230   msxpp/RamReq11
+    SLICE_X43Y28.A       Tilo                  0.259   msxpp/Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT12_5
+                                                       msxpp/RamReq15
+    SLICE_X43Y28.D3      net (fanout=3)        0.409   msxpp/RamReq
+    SLICE_X43Y28.D       Tilo                  0.259   msxpp/Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT12_5
+                                                       msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT13
+    SLICE_X43Y28.C6      net (fanout=1)        0.143   msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT12
+    SLICE_X43Y28.C       Tilo                  0.259   msxpp/Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT12_5
+                                                       msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT14
+    SLICE_X44Y29.A5      net (fanout=1)        0.431   msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT13
+    SLICE_X44Y29.CLK     Tas                   0.349   msxpp/SdrSta<0>
+                                                       msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT16
+                                                       msxpp/SdrSta_0
+    -------------------------------------------------  ---------------------------
+    Total                                      8.120ns (3.428ns logic, 4.692ns route)
+                                                       (42.2% logic, 57.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.737ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/iSltAdr_11 (FF)
+  Destination:          msxpp/SdrSta_0 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      8.057ns (Levels of Logic = 11)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.407ns (1.858 - 2.265)
+  Source Clock:         sysclk rising at 285739.999ns
+  Destination Clock:    msxpp/memclk rising at 285740.000ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/iSltAdr_11 to msxpp/SdrSta_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X45Y25.DQ      Tcko                  0.430   msxpp/iSltAdr<11>
+                                                       msxpp/iSltAdr_11
+    SLICE_X45Y25.A1      net (fanout=29)       0.818   msxpp/iSltAdr<11>
+    SLICE_X45Y25.A       Tilo                  0.259   msxpp/iSltAdr<11>
+                                                       msxpp/adr[15]_PWR_8_o_equal_154_o<15>2_SW0_SW0
+    SLICE_X42Y25.C6      net (fanout=1)        0.378   N1367
+    SLICE_X42Y25.C       Tilo                  0.255   msxpp/ExpDec
+                                                       msxpp/adr[15]_PWR_8_o_equal_154_o<15>2
+    SLICE_X42Y25.B4      net (fanout=8)        0.318   msxpp/U31_1/Dec1FFE
+    SLICE_X42Y25.B       Tilo                  0.254   msxpp/ExpDec
+                                                       msxpp/adr[15]_PWR_8_o_equal_154_o<15>1
+    SLICE_X42Y26.A5      net (fanout=4)        0.451   msxpp/adr[15]_PWR_8_o_equal_154_o
+    SLICE_X42Y26.A       Tilo                  0.254   msxpp/PpiPortA<3>
+                                                       msxpp/Mmux_iSltMap14
+    SLICE_X43Y27.A3      net (fanout=22)       0.581   msxpp/iSltMap
+    SLICE_X43Y27.A       Tilo                  0.259   msxpp/PpiPortA<7>
+                                                       msxpp/Mmux_MapReq11
+    SLICE_X43Y27.B5      net (fanout=3)        0.448   msxpp/MapReq
+    SLICE_X43Y27.BMUX    Tilo                  0.337   msxpp/PpiPortA<7>
+                                                       msxpp/RamReq1
+    SLICE_X43Y28.B5      net (fanout=1)        0.417   msxpp/RamReq1
+    SLICE_X43Y28.B       Tilo                  0.259   msxpp/Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT12_5
+                                                       msxpp/RamReq10
+    SLICE_X43Y28.A5      net (fanout=1)        0.230   msxpp/RamReq11
+    SLICE_X43Y28.A       Tilo                  0.259   msxpp/Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT12_5
+                                                       msxpp/RamReq15
+    SLICE_X43Y28.D3      net (fanout=3)        0.409   msxpp/RamReq
+    SLICE_X43Y28.D       Tilo                  0.259   msxpp/Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT12_5
+                                                       msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT13
+    SLICE_X43Y28.C6      net (fanout=1)        0.143   msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT12
+    SLICE_X43Y28.C       Tilo                  0.259   msxpp/Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT12_5
+                                                       msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT14
+    SLICE_X44Y29.A5      net (fanout=1)        0.431   msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT13
+    SLICE_X44Y29.CLK     Tas                   0.349   msxpp/SdrSta<0>
+                                                       msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT16
+                                                       msxpp/SdrSta_0
+    -------------------------------------------------  ---------------------------
+    Total                                      8.057ns (3.433ns logic, 4.624ns route)
+                                                       (42.6% logic, 57.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/SdrAdr_1 (SLICE_X42Y30.D1), 317 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -9.016ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/iSltAdr_2 (FF)
+  Destination:          msxpp/SdrAdr_1 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      8.328ns (Levels of Logic = 9)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.415ns (1.850 - 2.265)
+  Source Clock:         sysclk rising at 285739.999ns
+  Destination Clock:    msxpp/memclk rising at 285740.000ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/iSltAdr_2 to msxpp/SdrAdr_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y25.CQ      Tcko                  0.476   msxpp/iSltAdr<3>
+                                                       msxpp/iSltAdr_2
+    SLICE_X42Y28.A2      net (fanout=83)       1.260   msxpp/iSltAdr<2>
+    SLICE_X42Y28.AMUX    Tilo                  0.326   msxpp/U03/ff_bank1<3>
+                                                       msxpp/Mmux__n18871311111
+    SLICE_X41Y28.D4      net (fanout=13)       0.572   msxpp/Mmux__n1887111113
+    SLICE_X41Y28.DMUX    Tilo                  0.337   msxpp/ff_prepsg<4>
+                                                       msxpp/Mmux_GND_8_o_GND_8_o_mux_379_OUT511
+    SLICE_X38Y28.C1      net (fanout=10)       0.770   msxpp/Mmux_GND_8_o_GND_8_o_mux_379_OUT51
+    SLICE_X38Y28.CMUX    Tilo                  0.326   msxpp/ExpSlot3<7>
+                                                       msxpp/Mmux__n18871113
+    SLICE_X40Y28.B3      net (fanout=1)        0.630   msxpp/Mmux__n18871112
+    SLICE_X40Y28.B       Tilo                  0.235   msxpp/iSlt0_1
+                                                       msxpp/Mmux__n18871114
+    SLICE_X40Y28.A5      net (fanout=1)        0.196   msxpp/Mmux__n18871113
+    SLICE_X40Y28.A       Tilo                  0.235   msxpp/iSlt0_1
+                                                       msxpp/Mmux__n18871115
+    SLICE_X43Y29.B5      net (fanout=1)        0.589   msxpp/Mmux__n18871114
+    SLICE_X43Y29.B       Tilo                  0.259   msxpp/SdrSta<1>
+                                                       msxpp/Mmux__n18871116
+    SLICE_X43Y29.A5      net (fanout=1)        0.230   msxpp/Mmux__n18871115
+    SLICE_X43Y29.A       Tilo                  0.259   msxpp/SdrSta<1>
+                                                       msxpp/Mmux__n18871117
+    SLICE_X42Y30.B6      net (fanout=1)        0.327   msxpp/Mmux__n18871116
+    SLICE_X42Y30.B       Tilo                  0.254   msxpp/SdrAdr<1>
+                                                       msxpp/Mmux__n188711112
+    SLICE_X42Y30.D1      net (fanout=1)        0.598   msxpp/Mmux__n188711110
+    SLICE_X42Y30.CLK     Tas                   0.449   msxpp/SdrAdr<1>
+                                                       msxpp/Mmux__n188711114_F
+                                                       msxpp/Mmux__n188711114
+                                                       msxpp/SdrAdr_1
+    -------------------------------------------------  ---------------------------
+    Total                                      8.328ns (3.156ns logic, 5.172ns route)
+                                                       (37.9% logic, 62.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.750ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/iSltAdr_14 (FF)
+  Destination:          msxpp/SdrAdr_1 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      8.081ns (Levels of Logic = 10)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.396ns (1.850 - 2.246)
+  Source Clock:         sysclk rising at 285739.999ns
+  Destination Clock:    msxpp/memclk rising at 285740.000ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/iSltAdr_14 to msxpp/SdrAdr_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X41Y26.CQ      Tcko                  0.430   msxpp/iSltAdr<14>
+                                                       msxpp/iSltAdr_14
+    SLICE_X42Y26.C2      net (fanout=86)       0.899   msxpp/iSltAdr<14>
+    SLICE_X42Y26.C       Tilo                  0.255   msxpp/PpiPortA<3>
+                                                       msxpp/Mmux_rom_extd1111
+    SLICE_X42Y26.B4      net (fanout=2)        0.316   msxpp/Mmux_BusDir_o1122
+    SLICE_X42Y26.B       Tilo                  0.254   msxpp/PpiPortA<3>
+                                                       msxpp/Mmux_rom_extd111
+    SLICE_X38Y28.B6      net (fanout=2)        0.732   msxpp/Mmux_rom_extd11
+    SLICE_X38Y28.B       Tilo                  0.254   msxpp/ExpSlot3<7>
+                                                       msxpp/Mmux_rom_extd1
+    SLICE_X38Y28.C4      net (fanout=6)        0.354   msxpp/rom_extd
+    SLICE_X38Y28.CMUX    Tilo                  0.326   msxpp/ExpSlot3<7>
+                                                       msxpp/Mmux__n18871113
+    SLICE_X40Y28.B3      net (fanout=1)        0.630   msxpp/Mmux__n18871112
+    SLICE_X40Y28.B       Tilo                  0.235   msxpp/iSlt0_1
+                                                       msxpp/Mmux__n18871114
+    SLICE_X40Y28.A5      net (fanout=1)        0.196   msxpp/Mmux__n18871113
+    SLICE_X40Y28.A       Tilo                  0.235   msxpp/iSlt0_1
+                                                       msxpp/Mmux__n18871115
+    SLICE_X43Y29.B5      net (fanout=1)        0.589   msxpp/Mmux__n18871114
+    SLICE_X43Y29.B       Tilo                  0.259   msxpp/SdrSta<1>
+                                                       msxpp/Mmux__n18871116
+    SLICE_X43Y29.A5      net (fanout=1)        0.230   msxpp/Mmux__n18871115
+    SLICE_X43Y29.A       Tilo                  0.259   msxpp/SdrSta<1>
+                                                       msxpp/Mmux__n18871117
+    SLICE_X42Y30.B6      net (fanout=1)        0.327   msxpp/Mmux__n18871116
+    SLICE_X42Y30.B       Tilo                  0.254   msxpp/SdrAdr<1>
+                                                       msxpp/Mmux__n188711112
+    SLICE_X42Y30.D1      net (fanout=1)        0.598   msxpp/Mmux__n188711110
+    SLICE_X42Y30.CLK     Tas                   0.449   msxpp/SdrAdr<1>
+                                                       msxpp/Mmux__n188711114_F
+                                                       msxpp/Mmux__n188711114
+                                                       msxpp/SdrAdr_1
+    -------------------------------------------------  ---------------------------
+    Total                                      8.081ns (3.210ns logic, 4.871ns route)
+                                                       (39.7% logic, 60.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.714ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/PpiPortA_3 (FF)
+  Destination:          msxpp/SdrAdr_1 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      8.033ns (Levels of Logic = 9)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.408ns (1.850 - 2.258)
+  Source Clock:         sysclk rising at 285739.999ns
+  Destination Clock:    msxpp/memclk rising at 285740.000ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/PpiPortA_3 to msxpp/SdrAdr_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y26.DQ      Tcko                  0.525   msxpp/PpiPortA<3>
+                                                       msxpp/PpiPortA_3
+    SLICE_X39Y27.D2      net (fanout=14)       1.071   msxpp/PpiPortA<3>
+    SLICE_X39Y27.DMUX    Tilo                  0.337   msxpp/ExpSlot3<3>
+                                                       msxpp/Mmux_rom_extd1211
+    SLICE_X39Y27.B3      net (fanout=3)        0.574   msxpp/Mmux_rom_extd121
+    SLICE_X39Y27.B       Tilo                  0.259   msxpp/ExpSlot3<3>
+                                                       msxpp/Mmux_rom_xbas11
+    SLICE_X38Y28.C5      net (fanout=6)        0.680   msxpp/rom_xbas
+    SLICE_X38Y28.CMUX    Tilo                  0.326   msxpp/ExpSlot3<7>
+                                                       msxpp/Mmux__n18871113
+    SLICE_X40Y28.B3      net (fanout=1)        0.630   msxpp/Mmux__n18871112
+    SLICE_X40Y28.B       Tilo                  0.235   msxpp/iSlt0_1
+                                                       msxpp/Mmux__n18871114
+    SLICE_X40Y28.A5      net (fanout=1)        0.196   msxpp/Mmux__n18871113
+    SLICE_X40Y28.A       Tilo                  0.235   msxpp/iSlt0_1
+                                                       msxpp/Mmux__n18871115
+    SLICE_X43Y29.B5      net (fanout=1)        0.589   msxpp/Mmux__n18871114
+    SLICE_X43Y29.B       Tilo                  0.259   msxpp/SdrSta<1>
+                                                       msxpp/Mmux__n18871116
+    SLICE_X43Y29.A5      net (fanout=1)        0.230   msxpp/Mmux__n18871115
+    SLICE_X43Y29.A       Tilo                  0.259   msxpp/SdrSta<1>
+                                                       msxpp/Mmux__n18871117
+    SLICE_X42Y30.B6      net (fanout=1)        0.327   msxpp/Mmux__n18871116
+    SLICE_X42Y30.B       Tilo                  0.254   msxpp/SdrAdr<1>
+                                                       msxpp/Mmux__n188711112
+    SLICE_X42Y30.D1      net (fanout=1)        0.598   msxpp/Mmux__n188711110
+    SLICE_X42Y30.CLK     Tas                   0.449   msxpp/SdrAdr<1>
+                                                       msxpp/Mmux__n188711114_F
+                                                       msxpp/Mmux__n188711114
+                                                       msxpp/SdrAdr_1
+    -------------------------------------------------  ---------------------------
+    Total                                      8.033ns (3.138ns logic, 4.895ns route)
+                                                       (39.1% logic, 60.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/SdrAdr_8 (SLICE_X41Y30.A5), 499 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.971ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/iSltAdr_14 (FF)
+  Destination:          msxpp/SdrAdr_8 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      8.290ns (Levels of Logic = 10)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.408ns (1.838 - 2.246)
+  Source Clock:         sysclk rising at 285739.999ns
+  Destination Clock:    msxpp/memclk rising at 285740.000ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/iSltAdr_14 to msxpp/SdrAdr_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X41Y26.CQ      Tcko                  0.430   msxpp/iSltAdr<14>
+                                                       msxpp/iSltAdr_14
+    SLICE_X42Y26.C2      net (fanout=86)       0.899   msxpp/iSltAdr<14>
+    SLICE_X42Y26.C       Tilo                  0.255   msxpp/PpiPortA<3>
+                                                       msxpp/Mmux_rom_extd1111
+    SLICE_X42Y26.B4      net (fanout=2)        0.316   msxpp/Mmux_BusDir_o1122
+    SLICE_X42Y26.B       Tilo                  0.254   msxpp/PpiPortA<3>
+                                                       msxpp/Mmux_rom_extd111
+    SLICE_X38Y28.B6      net (fanout=2)        0.732   msxpp/Mmux_rom_extd11
+    SLICE_X38Y28.B       Tilo                  0.254   msxpp/ExpSlot3<7>
+                                                       msxpp/Mmux_rom_extd1
+    SLICE_X38Y28.C4      net (fanout=6)        0.354   msxpp/rom_extd
+    SLICE_X38Y28.C       Tilo                  0.255   msxpp/ExpSlot3<7>
+                                                       msxpp/Mmux__n1887130241
+    SLICE_X38Y28.A1      net (fanout=4)        0.579   msxpp/Mmux__n188713024
+    SLICE_X38Y28.A       Tilo                  0.254   msxpp/ExpSlot3<7>
+                                                       msxpp/Mmux__n188711111_SW0
+    SLICE_X41Y29.A6      net (fanout=1)        0.378   N14
+    SLICE_X41Y29.A       Tilo                  0.259   msxpp/Mmux__n1887146
+                                                       msxpp/Mmux__n188711111
+    SLICE_X41Y29.B5      net (fanout=9)        0.462   msxpp/Mmux__n188711111
+    SLICE_X41Y29.BMUX    Tilo                  0.337   msxpp/Mmux__n1887146
+                                                       msxpp/Mmux__n1887111131
+    SLICE_X41Y29.D2      net (fanout=1)        0.732   msxpp/Mmux__n188711113
+    SLICE_X41Y29.D       Tilo                  0.259   msxpp/Mmux__n1887146
+                                                       msxpp/Mmux__n18871461
+    SLICE_X41Y30.B5      net (fanout=1)        0.419   msxpp/Mmux__n1887146
+    SLICE_X41Y30.B       Tilo                  0.259   msxpp/SdrAdr<9>
+                                                       msxpp/Mmux__n18871462
+    SLICE_X41Y30.A5      net (fanout=1)        0.230   msxpp/Mmux__n18871462
+    SLICE_X41Y30.CLK     Tas                   0.373   msxpp/SdrAdr<9>
+                                                       msxpp/Mmux__n18871468
+                                                       msxpp/SdrAdr_8
+    -------------------------------------------------  ---------------------------
+    Total                                      8.290ns (3.189ns logic, 5.101ns route)
+                                                       (38.5% logic, 61.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.935ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/PpiPortA_3 (FF)
+  Destination:          msxpp/SdrAdr_8 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      8.242ns (Levels of Logic = 9)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.420ns (1.838 - 2.258)
+  Source Clock:         sysclk rising at 285739.999ns
+  Destination Clock:    msxpp/memclk rising at 285740.000ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/PpiPortA_3 to msxpp/SdrAdr_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y26.DQ      Tcko                  0.525   msxpp/PpiPortA<3>
+                                                       msxpp/PpiPortA_3
+    SLICE_X39Y27.D2      net (fanout=14)       1.071   msxpp/PpiPortA<3>
+    SLICE_X39Y27.DMUX    Tilo                  0.337   msxpp/ExpSlot3<3>
+                                                       msxpp/Mmux_rom_extd1211
+    SLICE_X39Y27.B3      net (fanout=3)        0.574   msxpp/Mmux_rom_extd121
+    SLICE_X39Y27.B       Tilo                  0.259   msxpp/ExpSlot3<3>
+                                                       msxpp/Mmux_rom_xbas11
+    SLICE_X38Y28.C5      net (fanout=6)        0.680   msxpp/rom_xbas
+    SLICE_X38Y28.C       Tilo                  0.255   msxpp/ExpSlot3<7>
+                                                       msxpp/Mmux__n1887130241
+    SLICE_X38Y28.A1      net (fanout=4)        0.579   msxpp/Mmux__n188713024
+    SLICE_X38Y28.A       Tilo                  0.254   msxpp/ExpSlot3<7>
+                                                       msxpp/Mmux__n188711111_SW0
+    SLICE_X41Y29.A6      net (fanout=1)        0.378   N14
+    SLICE_X41Y29.A       Tilo                  0.259   msxpp/Mmux__n1887146
+                                                       msxpp/Mmux__n188711111
+    SLICE_X41Y29.B5      net (fanout=9)        0.462   msxpp/Mmux__n188711111
+    SLICE_X41Y29.BMUX    Tilo                  0.337   msxpp/Mmux__n1887146
+                                                       msxpp/Mmux__n1887111131
+    SLICE_X41Y29.D2      net (fanout=1)        0.732   msxpp/Mmux__n188711113
+    SLICE_X41Y29.D       Tilo                  0.259   msxpp/Mmux__n1887146
+                                                       msxpp/Mmux__n18871461
+    SLICE_X41Y30.B5      net (fanout=1)        0.419   msxpp/Mmux__n1887146
+    SLICE_X41Y30.B       Tilo                  0.259   msxpp/SdrAdr<9>
+                                                       msxpp/Mmux__n18871462
+    SLICE_X41Y30.A5      net (fanout=1)        0.230   msxpp/Mmux__n18871462
+    SLICE_X41Y30.CLK     Tas                   0.373   msxpp/SdrAdr<9>
+                                                       msxpp/Mmux__n18871468
+                                                       msxpp/SdrAdr_8
+    -------------------------------------------------  ---------------------------
+    Total                                      8.242ns (3.117ns logic, 5.125ns route)
+                                                       (37.8% logic, 62.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.853ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/iSltAdr_14 (FF)
+  Destination:          msxpp/SdrAdr_8 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      8.172ns (Levels of Logic = 10)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.408ns (1.838 - 2.246)
+  Source Clock:         sysclk rising at 285739.999ns
+  Destination Clock:    msxpp/memclk rising at 285740.000ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/iSltAdr_14 to msxpp/SdrAdr_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X41Y26.CQ      Tcko                  0.430   msxpp/iSltAdr<14>
+                                                       msxpp/iSltAdr_14
+    SLICE_X41Y26.D1      net (fanout=86)       0.707   msxpp/iSltAdr<14>
+    SLICE_X41Y26.DMUX    Tilo                  0.337   msxpp/iSltAdr<14>
+                                                       msxpp/rom_main_iSltLin2_OR_174_o131
+    SLICE_X39Y26.B6      net (fanout=3)        0.364   msxpp/rom_main_iSltLin2_OR_174_o13
+    SLICE_X39Y26.B       Tilo                  0.259   msxpp/iSltAdr<7>
+                                                       msxpp/rom_main_iSltLin2_OR_174_o111
+    SLICE_X41Y27.B6      net (fanout=2)        0.385   msxpp/rom_main_iSltLin2_OR_174_o11
+    SLICE_X41Y27.B       Tilo                  0.259   msxpp/iSltIorq_n
+                                                       msxpp/Mmux_rom_main11
+    SLICE_X38Y28.C3      net (fanout=6)        0.635   msxpp/rom_main
+    SLICE_X38Y28.C       Tilo                  0.255   msxpp/ExpSlot3<7>
+                                                       msxpp/Mmux__n1887130241
+    SLICE_X38Y28.A1      net (fanout=4)        0.579   msxpp/Mmux__n188713024
+    SLICE_X38Y28.A       Tilo                  0.254   msxpp/ExpSlot3<7>
+                                                       msxpp/Mmux__n188711111_SW0
+    SLICE_X41Y29.A6      net (fanout=1)        0.378   N14
+    SLICE_X41Y29.A       Tilo                  0.259   msxpp/Mmux__n1887146
+                                                       msxpp/Mmux__n188711111
+    SLICE_X41Y29.B5      net (fanout=9)        0.462   msxpp/Mmux__n188711111
+    SLICE_X41Y29.BMUX    Tilo                  0.337   msxpp/Mmux__n1887146
+                                                       msxpp/Mmux__n1887111131
+    SLICE_X41Y29.D2      net (fanout=1)        0.732   msxpp/Mmux__n188711113
+    SLICE_X41Y29.D       Tilo                  0.259   msxpp/Mmux__n1887146
+                                                       msxpp/Mmux__n18871461
+    SLICE_X41Y30.B5      net (fanout=1)        0.419   msxpp/Mmux__n1887146
+    SLICE_X41Y30.B       Tilo                  0.259   msxpp/SdrAdr<9>
+                                                       msxpp/Mmux__n18871462
+    SLICE_X41Y30.A5      net (fanout=1)        0.230   msxpp/Mmux__n18871462
+    SLICE_X41Y30.CLK     Tas                   0.373   msxpp/SdrAdr<9>
+                                                       msxpp/Mmux__n18871468
+                                                       msxpp/SdrAdr_8
+    -------------------------------------------------  ---------------------------
+    Total                                      8.172ns (3.281ns logic, 4.891ns route)
+                                                       (40.1% logic, 59.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_msxpp_U00_clkout1 = PERIOD TIMEGRP "msxpp_U00_clkout1" TS_clk50 /
+        1.71428571 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/RstSeq_0 (SLICE_X36Y25.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.424ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               msxpp/RstSeq_0 (FF)
+  Destination:          msxpp/RstSeq_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.424ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         msxpp/memclk rising at 0.000ns
+  Destination Clock:    msxpp/memclk rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/RstSeq_0 to msxpp/RstSeq_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y25.AQ      Tcko                  0.200   msxpp/RstSeq<2>
+                                                       msxpp/RstSeq_0
+    SLICE_X36Y25.A6      net (fanout=6)        0.034   msxpp/RstSeq<0>
+    SLICE_X36Y25.CLK     Tah         (-Th)    -0.190   msxpp/RstSeq<2>
+                                                       msxpp/Mcount_RstSeq_xor<0>11_INV_0
+                                                       msxpp/RstSeq_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.424ns (0.390ns logic, 0.034ns route)
+                                                       (92.0% logic, 8.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/SdrSize_0 (SLICE_X32Y21.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.458ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               msxpp/SdrSize_0 (FF)
+  Destination:          msxpp/SdrSize_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.458ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         msxpp/memclk rising at 0.000ns
+  Destination Clock:    msxpp/memclk rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/SdrSize_0 to msxpp/SdrSize_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X32Y21.CQ      Tcko                  0.200   msxpp/SdrSize<0>
+                                                       msxpp/SdrSize_0
+    SLICE_X32Y21.C5      net (fanout=2)        0.068   msxpp/SdrSize<0>
+    SLICE_X32Y21.CLK     Tah         (-Th)    -0.190   msxpp/SdrSize<0>
+                                                       msxpp/SdrSize_0_rstpot
+                                                       msxpp/SdrSize_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.458ns (0.390ns logic, 0.068ns route)
+                                                       (85.2% logic, 14.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/FreeCounter_15 (SLICE_X24Y19.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.461ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               msxpp/FreeCounter_15 (FF)
+  Destination:          msxpp/FreeCounter_15 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.461ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         msxpp/memclk rising at 0.000ns
+  Destination Clock:    msxpp/memclk rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/FreeCounter_15 to msxpp/FreeCounter_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X24Y19.DQ      Tcko                  0.200   msxpp/FreeCounter<15>
+                                                       msxpp/FreeCounter_15
+    SLICE_X24Y19.D6      net (fanout=2)        0.024   msxpp/FreeCounter<15>
+    SLICE_X24Y19.CLK     Tah         (-Th)    -0.237   msxpp/FreeCounter<15>
+                                                       msxpp/FreeCounter<15>_rt
+                                                       msxpp/Mcount_FreeCounter_xor<15>
+                                                       msxpp/FreeCounter_15
+    -------------------------------------------------  ---------------------------
+    Total                                      0.461ns (0.437ns logic, 0.024ns route)
+                                                       (94.8% logic, 5.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_msxpp_U00_clkout1 = PERIOD TIMEGRP "msxpp_U00_clkout1" TS_clk50 /
+        1.71428571 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 11.666ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: msxpp/U00/clkout2_buf/I0
+  Logical resource: msxpp/U00/clkout2_buf/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: msxpp/U00/clkout1
+--------------------------------------------------------------------------------
+Slack: 11.186ns (period - min period limit)
+  Period: 11.666ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: msxpp/RstSeq<4>/CLK
+  Logical resource: msxpp/RstSeq_4/CK
+  Location pin: SLICE_X34Y27.CLK
+  Clock network: msxpp/memclk
+--------------------------------------------------------------------------------
+Slack: 11.186ns (period - min period limit)
+  Period: 11.666ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: msxpp/ff_sdr_seq<2>/CLK
+  Logical resource: msxpp/ff_sdr_seq_0/CK
+  Location pin: SLICE_X38Y29.CLK
+  Clock network: msxpp/memclk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_msxpp_U00_clkout0 = PERIOD TIMEGRP "msxpp_U00_clkout0" 
+TS_clk50 /         0.428571429 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 24929729 paths analyzed, 36143 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  43.069ns.
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_348 (SLICE_X7Y71.CE), 18 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.899ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_348 (FF)
+  Requirement:          11.666ns
+  Data Path Delay:      10.221ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.272ns (1.962 - 2.234)
+  Source Clock:         msxpp/memclk rising at 285775.000ns
+  Destination Clock:    sysclk rising at 285786.666ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/reset to msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_348
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.430   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X7Y71.C1       net (fanout=967)      6.740   msxpp/reset
+    SLICE_X7Y71.C        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_349
+                                                       msxpp/U32/U1/eg/u_envelope_memory/n0000_0_inv141
+    SLICE_X3Y71.D4       net (fanout=13)       0.981   msxpp/U32/U1/eg/u_envelope_memory/n0000_0_inv_13
+    SLICE_X3Y71.D        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_347
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_3251
+    SLICE_X7Y71.CE       net (fanout=4)        1.147   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_325
+    SLICE_X7Y71.CLK      Tceck                 0.405   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_349
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_348
+    -------------------------------------------------  ---------------------------
+    Total                                     10.221ns (1.353ns logic, 8.868ns route)
+                                                       (13.2% logic, 86.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.901ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_348 (FF)
+  Requirement:          11.666ns
+  Data Path Delay:      7.219ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.272ns (1.962 - 2.234)
+  Source Clock:         msxpp/memclk rising at 285775.000ns
+  Destination Clock:    sysclk rising at 285786.666ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/reset to msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_348
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.430   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X28Y67.B1      net (fanout=967)      0.837   msxpp/reset
+    SLICE_X28Y67.B       Tilo                  0.235   msxpp/U32/U1/ct/rflag<3>
+                                                       msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_SW0
+    SLICE_X28Y67.A5      net (fanout=2)        0.201   N544
+    SLICE_X28Y67.A       Tilo                  0.235   msxpp/U32/U1/ct/rflag<3>
+                                                       msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o
+    SLICE_X7Y71.A1       net (fanout=18)       2.292   msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0
+    SLICE_X7Y71.A        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_349
+                                                       msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0131
+    SLICE_X3Y71.D5       net (fanout=13)       0.919   msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0_13
+    SLICE_X3Y71.D        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_347
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_3251
+    SLICE_X7Y71.CE       net (fanout=4)        1.147   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_325
+    SLICE_X7Y71.CLK      Tceck                 0.405   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_349
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_348
+    -------------------------------------------------  ---------------------------
+    Total                                      7.219ns (1.823ns logic, 5.396ns route)
+                                                       (25.3% logic, 74.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     34.596ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/U32/U1/s2/ff_count_3 (FF)
+  Destination:          msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_348 (FF)
+  Requirement:          46.666ns
+  Data Path Delay:      12.048ns (Levels of Logic = 2)
+  Clock Path Skew:      0.132ns (0.582 - 0.450)
+  Source Clock:         sysclk rising at 0.000ns
+  Destination Clock:    sysclk rising at 46.666ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/U32/U1/s2/ff_count_3 to msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_348
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y76.BMUX    Tshcko                0.518   msxpp/U32/U1/s2/ff_count<5>
+                                                       msxpp/U32/U1/s2/ff_count_3
+    SLICE_X7Y71.A3       net (fanout=148)      8.541   msxpp/U32/U1/s2/ff_count<3>
+    SLICE_X7Y71.A        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_349
+                                                       msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0131
+    SLICE_X3Y71.D5       net (fanout=13)       0.919   msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0_13
+    SLICE_X3Y71.D        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_347
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_3251
+    SLICE_X7Y71.CE       net (fanout=4)        1.147   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_325
+    SLICE_X7Y71.CLK      Tceck                 0.405   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_349
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_348
+    -------------------------------------------------  ---------------------------
+    Total                                     12.048ns (1.441ns logic, 10.607ns route)
+                                                       (12.0% logic, 88.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_349 (SLICE_X7Y71.CE), 18 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.914ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_349 (FF)
+  Requirement:          11.666ns
+  Data Path Delay:      10.206ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.272ns (1.962 - 2.234)
+  Source Clock:         msxpp/memclk rising at 285775.000ns
+  Destination Clock:    sysclk rising at 285786.666ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/reset to msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_349
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.430   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X7Y71.C1       net (fanout=967)      6.740   msxpp/reset
+    SLICE_X7Y71.C        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_349
+                                                       msxpp/U32/U1/eg/u_envelope_memory/n0000_0_inv141
+    SLICE_X3Y71.D4       net (fanout=13)       0.981   msxpp/U32/U1/eg/u_envelope_memory/n0000_0_inv_13
+    SLICE_X3Y71.D        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_347
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_3251
+    SLICE_X7Y71.CE       net (fanout=4)        1.147   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_325
+    SLICE_X7Y71.CLK      Tceck                 0.390   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_349
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_349
+    -------------------------------------------------  ---------------------------
+    Total                                     10.206ns (1.338ns logic, 8.868ns route)
+                                                       (13.1% logic, 86.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.916ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_349 (FF)
+  Requirement:          11.666ns
+  Data Path Delay:      7.204ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.272ns (1.962 - 2.234)
+  Source Clock:         msxpp/memclk rising at 285775.000ns
+  Destination Clock:    sysclk rising at 285786.666ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/reset to msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_349
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.430   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X28Y67.B1      net (fanout=967)      0.837   msxpp/reset
+    SLICE_X28Y67.B       Tilo                  0.235   msxpp/U32/U1/ct/rflag<3>
+                                                       msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_SW0
+    SLICE_X28Y67.A5      net (fanout=2)        0.201   N544
+    SLICE_X28Y67.A       Tilo                  0.235   msxpp/U32/U1/ct/rflag<3>
+                                                       msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o
+    SLICE_X7Y71.A1       net (fanout=18)       2.292   msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0
+    SLICE_X7Y71.A        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_349
+                                                       msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0131
+    SLICE_X3Y71.D5       net (fanout=13)       0.919   msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0_13
+    SLICE_X3Y71.D        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_347
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_3251
+    SLICE_X7Y71.CE       net (fanout=4)        1.147   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_325
+    SLICE_X7Y71.CLK      Tceck                 0.390   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_349
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_349
+    -------------------------------------------------  ---------------------------
+    Total                                      7.204ns (1.808ns logic, 5.396ns route)
+                                                       (25.1% logic, 74.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     34.611ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/U32/U1/s2/ff_count_3 (FF)
+  Destination:          msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_349 (FF)
+  Requirement:          46.666ns
+  Data Path Delay:      12.033ns (Levels of Logic = 2)
+  Clock Path Skew:      0.132ns (0.582 - 0.450)
+  Source Clock:         sysclk rising at 0.000ns
+  Destination Clock:    sysclk rising at 46.666ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/U32/U1/s2/ff_count_3 to msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_349
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y76.BMUX    Tshcko                0.518   msxpp/U32/U1/s2/ff_count<5>
+                                                       msxpp/U32/U1/s2/ff_count_3
+    SLICE_X7Y71.A3       net (fanout=148)      8.541   msxpp/U32/U1/s2/ff_count<3>
+    SLICE_X7Y71.A        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_349
+                                                       msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0131
+    SLICE_X3Y71.D5       net (fanout=13)       0.919   msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0_13
+    SLICE_X3Y71.D        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_347
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_3251
+    SLICE_X7Y71.CE       net (fanout=4)        1.147   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_325
+    SLICE_X7Y71.CLK      Tceck                 0.390   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_349
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_349
+    -------------------------------------------------  ---------------------------
+    Total                                     12.033ns (1.426ns logic, 10.607ns route)
+                                                       (11.9% logic, 88.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_293 (SLICE_X4Y76.CE), 18 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.981ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_293 (FF)
+  Requirement:          11.666ns
+  Data Path Delay:      10.155ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.256ns (1.978 - 2.234)
+  Source Clock:         msxpp/memclk rising at 285775.000ns
+  Destination Clock:    sysclk rising at 285786.666ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/reset to msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_293
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.430   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X3Y76.C5       net (fanout=967)      6.880   msxpp/reset
+    SLICE_X3Y76.C        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_299
+                                                       msxpp/U32/U1/eg/u_envelope_memory/n0000_0_inv121
+    SLICE_X4Y76.D5       net (fanout=13)       0.708   msxpp/U32/U1/eg/u_envelope_memory/n0000_0_inv_11
+    SLICE_X4Y76.D        Tilo                  0.235   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_297
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_2751
+    SLICE_X4Y76.CE       net (fanout=4)        1.329   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_275
+    SLICE_X4Y76.CLK      Tceck                 0.314   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_297
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_293
+    -------------------------------------------------  ---------------------------
+    Total                                     10.155ns (1.238ns logic, 8.917ns route)
+                                                       (12.2% logic, 87.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.843ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_293 (FF)
+  Requirement:          11.666ns
+  Data Path Delay:      7.293ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.256ns (1.978 - 2.234)
+  Source Clock:         msxpp/memclk rising at 285775.000ns
+  Destination Clock:    sysclk rising at 285786.666ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/reset to msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_293
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.430   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X28Y67.B1      net (fanout=967)      0.837   msxpp/reset
+    SLICE_X28Y67.B       Tilo                  0.235   msxpp/U32/U1/ct/rflag<3>
+                                                       msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_SW0
+    SLICE_X28Y67.A5      net (fanout=2)        0.201   N544
+    SLICE_X28Y67.A       Tilo                  0.235   msxpp/U32/U1/ct/rflag<3>
+                                                       msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o
+    SLICE_X3Y76.A2       net (fanout=18)       2.326   msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0
+    SLICE_X3Y76.A        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_299
+                                                       msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0111
+    SLICE_X4Y76.D4       net (fanout=13)       0.892   msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0_11
+    SLICE_X4Y76.D        Tilo                  0.235   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_297
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_2751
+    SLICE_X4Y76.CE       net (fanout=4)        1.329   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_275
+    SLICE_X4Y76.CLK      Tceck                 0.314   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_297
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_293
+    -------------------------------------------------  ---------------------------
+    Total                                      7.293ns (1.708ns logic, 5.585ns route)
+                                                       (23.4% logic, 76.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     34.640ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/U32/U1/s2/ff_count_3 (FF)
+  Destination:          msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_293 (FF)
+  Requirement:          46.666ns
+  Data Path Delay:      12.020ns (Levels of Logic = 2)
+  Clock Path Skew:      0.148ns (0.598 - 0.450)
+  Source Clock:         sysclk rising at 0.000ns
+  Destination Clock:    sysclk rising at 46.666ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/U32/U1/s2/ff_count_3 to msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_293
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y76.BMUX    Tshcko                0.518   msxpp/U32/U1/s2/ff_count<5>
+                                                       msxpp/U32/U1/s2/ff_count_3
+    SLICE_X3Y76.A5       net (fanout=148)      8.473   msxpp/U32/U1/s2/ff_count<3>
+    SLICE_X3Y76.A        Tilo                  0.259   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_299
+                                                       msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0111
+    SLICE_X4Y76.D4       net (fanout=13)       0.892   msxpp/U32/U1/eg/u_envelope_memory/wr_GND_256_o_MUX_3934_o_0_11
+    SLICE_X4Y76.D        Tilo                  0.235   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_297
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_2751
+    SLICE_X4Y76.CE       net (fanout=4)        1.329   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ClockEnableEqn_275
+    SLICE_X4Y76.CLK      Tceck                 0.314   msxpp/U32/U1/eg/u_envelope_memory/egdata_set_ff_297
+                                                       msxpp/U32/U1/eg/u_envelope_memory/egdata_set_FF_293
+    -------------------------------------------------  ---------------------------
+    Total                                     12.020ns (1.326ns logic, 10.694ns route)
+                                                       (11.0% logic, 89.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_msxpp_U00_clkout0 = PERIOD TIMEGRP "msxpp_U00_clkout0" TS_clk50 /
+        0.428571429 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U35/io42_id212_2 (SLICE_X43Y16.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.050ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               msxpp/power_on_reset (FF)
+  Destination:          msxpp/U35/io42_id212_2 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      0.729ns (Levels of Logic = 0)
+  Clock Path Skew:      0.406ns (2.266 - 1.860)
+  Source Clock:         msxpp/memclk rising at 285786.667ns
+  Destination Clock:    sysclk rising at 285786.666ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Minimum Data Path at Slow Process Corner: msxpp/power_on_reset to msxpp/U35/io42_id212_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X45Y16.AQ      Tcko                  0.405   msxpp/power_on_reset
+                                                       msxpp/power_on_reset
+    SLICE_X43Y16.CE      net (fanout=35)       0.371   msxpp/power_on_reset
+    SLICE_X43Y16.CLK     Tckce       (-Th)     0.047   msxpp/U35/io42_id212<3>
+                                                       msxpp/U35/io42_id212_2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.729ns (0.358ns logic, 0.371ns route)
+                                                       (49.1% logic, 50.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U08/dbi_6 (SLICE_X37Y34.CX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.066ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               msxpp/RamDbi_6 (FF)
+  Destination:          msxpp/U08/dbi_6 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      0.420ns (Levels of Logic = 0)
+  Clock Path Skew:      0.081ns (0.826 - 0.745)
+  Source Clock:         msxpp/memclk rising at 285786.667ns
+  Destination Clock:    sysclk rising at 285786.666ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/RamDbi_6 to msxpp/U08/dbi_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y34.CQ      Tcko                  0.200   msxpp/RamDbi<6>
+                                                       msxpp/RamDbi_6
+    SLICE_X37Y34.CX      net (fanout=4)        0.161   msxpp/RamDbi<6>
+    SLICE_X37Y34.CLK     Tckdi       (-Th)    -0.059   msxpp/U08/dbi<7>
+                                                       msxpp/U08/dbi_6
+    -------------------------------------------------  ---------------------------
+    Total                                      0.420ns (0.259ns logic, 0.161ns route)
+                                                       (61.7% logic, 38.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U35/io42_id212_3 (SLICE_X43Y16.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.067ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               msxpp/power_on_reset (FF)
+  Destination:          msxpp/U35/io42_id212_3 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      0.746ns (Levels of Logic = 0)
+  Clock Path Skew:      0.406ns (2.266 - 1.860)
+  Source Clock:         msxpp/memclk rising at 285786.667ns
+  Destination Clock:    sysclk rising at 285786.666ns
+  Clock Uncertainty:    0.274ns
+
+  Clock Uncertainty:          0.274ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.120ns
+
+  Minimum Data Path at Slow Process Corner: msxpp/power_on_reset to msxpp/U35/io42_id212_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X45Y16.AQ      Tcko                  0.405   msxpp/power_on_reset
+                                                       msxpp/power_on_reset
+    SLICE_X43Y16.CE      net (fanout=35)       0.371   msxpp/power_on_reset
+    SLICE_X43Y16.CLK     Tckce       (-Th)     0.030   msxpp/U35/io42_id212<3>
+                                                       msxpp/U35/io42_id212_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.746ns (0.375ns logic, 0.371ns route)
+                                                       (50.3% logic, 49.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_msxpp_U00_clkout0 = PERIOD TIMEGRP "msxpp_U00_clkout0" TS_clk50 /
+        0.428571429 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 43.096ns (period - min period limit)
+  Period: 46.666ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: msxpp/U32/U1/op/u_sine_table_Mram_w_addr1[6]_GND_263_o_wide_mux_9_OUT1/CLKAWRCLK
+  Logical resource: msxpp/U32/U1/op/u_sine_table_Mram_w_addr1[6]_GND_263_o_wide_mux_9_OUT1/CLKAWRCLK
+  Location pin: RAMB8_X0Y25.CLKAWRCLK
+  Clock network: sysclk
+--------------------------------------------------------------------------------
+Slack: 43.096ns (period - min period limit)
+  Period: 46.666ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
+  Physical resource: msxpp/U32/U1/op/u_sine_table_Mram_w_addr1[6]_GND_263_o_wide_mux_9_OUT1/CLKBRDCLK
+  Logical resource: msxpp/U32/U1/op/u_sine_table_Mram_w_addr1[6]_GND_263_o_wide_mux_9_OUT1/CLKBRDCLK
+  Location pin: RAMB8_X0Y25.CLKBRDCLK
+  Clock network: sysclk
+--------------------------------------------------------------------------------
+Slack: 43.096ns (period - min period limit)
+  Period: 46.666ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: msxpp/U07/u_mem/Mram_blkram/CLKAWRCLK
+  Logical resource: msxpp/U07/u_mem/Mram_blkram/CLKAWRCLK
+  Location pin: RAMB8_X2Y9.CLKAWRCLK
+  Clock network: sysclk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_TO_msxppU06ff_led_kana_lock_LDC = MAXDELAY TO TIMEGRP     
+    "TO_msxppU06ff_led_kana_lock_LDC" TS_msxpp_U00_clkout0 DATAPATHONLY;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 4 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   7.571ns.
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U06/ff_led_kana_lock_LDC (SLICE_X21Y12.SR), 2 paths
+--------------------------------------------------------------------------------
+Slack (setup paths):    39.095ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U06/ff_led_kana_lock_LDC (LATCH)
+  Requirement:          46.666ns
+  Data Path Delay:      7.571ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         msxpp/memclk rising at 0.000ns
+  Destination Clock:    msxpp/U06/reset_Kana_AND_1197_o falling
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/reset to msxpp/U06/ff_led_kana_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.430   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X20Y12.C1      net (fanout=967)      6.040   msxpp/reset
+    SLICE_X20Y12.C       Tilo                  0.235   msxpp/U06/reset_Kana_AND_1198_o
+                                                       msxpp/U06/reset_Kana_AND_1198_o1
+    SLICE_X21Y12.SR      net (fanout=2)        0.586   msxpp/U06/reset_Kana_AND_1198_o
+    SLICE_X21Y12.CLK     Trck                  0.280   msxpp/U06/ff_led_kana_lock_LDC
+                                                       msxpp/U06/ff_led_kana_lock_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      7.571ns (0.945ns logic, 6.626ns route)
+                                                       (12.5% logic, 87.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup paths):    44.260ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/U30/kana (FF)
+  Destination:          msxpp/U06/ff_led_kana_lock_LDC (LATCH)
+  Requirement:          46.666ns
+  Data Path Delay:      2.406ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sysclk rising at 0.000ns
+  Destination Clock:    msxpp/U06/reset_Kana_AND_1197_o falling
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/U30/kana to msxpp/U06/ff_led_kana_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y16.AQ      Tcko                  0.430   msxpp/U30/kana
+                                                       msxpp/U30/kana
+    SLICE_X20Y12.C3      net (fanout=5)        0.875   msxpp/U30/kana
+    SLICE_X20Y12.C       Tilo                  0.235   msxpp/U06/reset_Kana_AND_1198_o
+                                                       msxpp/U06/reset_Kana_AND_1198_o1
+    SLICE_X21Y12.SR      net (fanout=2)        0.586   msxpp/U06/reset_Kana_AND_1198_o
+    SLICE_X21Y12.CLK     Trck                  0.280   msxpp/U06/ff_led_kana_lock_LDC
+                                                       msxpp/U06/ff_led_kana_lock_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      2.406ns (0.945ns logic, 1.461ns route)
+                                                       (39.3% logic, 60.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U06/ff_led_kana_lock_LDC (SLICE_X21Y12.CLK), 2 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  39.098ns (requirement - data path)
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U06/ff_led_kana_lock_LDC (LATCH)
+  Requirement:          46.666ns
+  Data Path Delay:      7.568ns (Levels of Logic = 1)
+  Source Clock:         msxpp/memclk rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/reset to msxpp/U06/ff_led_kana_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.430   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X20Y12.C1      net (fanout=967)      6.040   msxpp/reset
+    SLICE_X20Y12.CMUX    Tilo                  0.298   msxpp/U06/reset_Kana_AND_1198_o
+                                                       msxpp/U06/reset_Kana_AND_1197_o1
+    SLICE_X21Y12.CLK     net (fanout=2)        0.800   msxpp/U06/reset_Kana_AND_1197_o
+    -------------------------------------------------  ---------------------------
+    Total                                      7.568ns (0.728ns logic, 6.840ns route)
+                                                       (9.6% logic, 90.4% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  44.263ns (requirement - data path)
+  Source:               msxpp/U30/kana (FF)
+  Destination:          msxpp/U06/ff_led_kana_lock_LDC (LATCH)
+  Requirement:          46.666ns
+  Data Path Delay:      2.403ns (Levels of Logic = 1)
+  Source Clock:         sysclk rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/U30/kana to msxpp/U06/ff_led_kana_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y16.AQ      Tcko                  0.430   msxpp/U30/kana
+                                                       msxpp/U30/kana
+    SLICE_X20Y12.C3      net (fanout=5)        0.875   msxpp/U30/kana
+    SLICE_X20Y12.CMUX    Tilo                  0.298   msxpp/U06/reset_Kana_AND_1198_o
+                                                       msxpp/U06/reset_Kana_AND_1197_o1
+    SLICE_X21Y12.CLK     net (fanout=2)        0.800   msxpp/U06/reset_Kana_AND_1197_o
+    -------------------------------------------------  ---------------------------
+    Total                                      2.403ns (0.728ns logic, 1.675ns route)
+                                                       (30.3% logic, 69.7% route)
+
+--------------------------------------------------------------------------------
+Hold Paths: TS_TO_msxppU06ff_led_kana_lock_LDC = MAXDELAY TO TIMEGRP         "TO_msxppU06ff_led_kana_lock_LDC" TS_msxpp_U00_clkout0 DATAPATHONLY;
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U06/ff_led_kana_lock_LDC (SLICE_X21Y12.SR), 2 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      1.239ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               msxpp/U30/kana (FF)
+  Destination:          msxpp/U06/ff_led_kana_lock_LDC (LATCH)
+  Requirement:          0.000ns
+  Data Path Delay:      1.239ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         sysclk rising at 0.000ns
+  Destination Clock:    msxpp/U06/reset_Kana_AND_1197_o falling
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/U30/kana to msxpp/U06/ff_led_kana_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y16.AQ      Tcko                  0.198   msxpp/U30/kana
+                                                       msxpp/U30/kana
+    SLICE_X20Y12.C3      net (fanout=5)        0.449   msxpp/U30/kana
+    SLICE_X20Y12.C       Tilo                  0.142   msxpp/U06/reset_Kana_AND_1198_o
+                                                       msxpp/U06/reset_Kana_AND_1198_o1
+    SLICE_X21Y12.SR      net (fanout=2)        0.295   msxpp/U06/reset_Kana_AND_1198_o
+    SLICE_X21Y12.CLK     Tremck      (-Th)    -0.155   msxpp/U06/ff_led_kana_lock_LDC
+                                                       msxpp/U06/ff_led_kana_lock_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      1.239ns (0.495ns logic, 0.744ns route)
+                                                       (40.0% logic, 60.0% route)
+--------------------------------------------------------------------------------
+Slack (hold path):      4.260ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U06/ff_led_kana_lock_LDC (LATCH)
+  Requirement:          0.000ns
+  Data Path Delay:      4.260ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         msxpp/memclk rising at 0.000ns
+  Destination Clock:    msxpp/U06/reset_Kana_AND_1197_o falling
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/reset to msxpp/U06/ff_led_kana_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.198   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X20Y12.C1      net (fanout=967)      3.470   msxpp/reset
+    SLICE_X20Y12.C       Tilo                  0.142   msxpp/U06/reset_Kana_AND_1198_o
+                                                       msxpp/U06/reset_Kana_AND_1198_o1
+    SLICE_X21Y12.SR      net (fanout=2)        0.295   msxpp/U06/reset_Kana_AND_1198_o
+    SLICE_X21Y12.CLK     Tremck      (-Th)    -0.155   msxpp/U06/ff_led_kana_lock_LDC
+                                                       msxpp/U06/ff_led_kana_lock_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      4.260ns (0.495ns logic, 3.765ns route)
+                                                       (11.6% logic, 88.4% route)
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U06/ff_led_kana_lock_LDC (SLICE_X21Y12.CLK), 2 paths
+--------------------------------------------------------------------------------
+Delay (fastest path):   1.201ns (data path)
+  Source:               msxpp/U30/kana (FF)
+  Destination:          msxpp/U06/ff_led_kana_lock_LDC (LATCH)
+  Data Path Delay:      1.201ns (Levels of Logic = 1)
+  Source Clock:         sysclk rising at 0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/U30/kana to msxpp/U06/ff_led_kana_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y16.AQ      Tcko                  0.198   msxpp/U30/kana
+                                                       msxpp/U30/kana
+    SLICE_X20Y12.C3      net (fanout=5)        0.449   msxpp/U30/kana
+    SLICE_X20Y12.CMUX    Tilo                  0.183   msxpp/U06/reset_Kana_AND_1198_o
+                                                       msxpp/U06/reset_Kana_AND_1197_o1
+    SLICE_X21Y12.CLK     net (fanout=2)        0.371   msxpp/U06/reset_Kana_AND_1197_o
+    -------------------------------------------------  ---------------------------
+    Total                                      1.201ns (0.381ns logic, 0.820ns route)
+                                                       (31.7% logic, 68.3% route)
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U06/ff_led_kana_lock_LDC (SLICE_X21Y12.CLK), 2 paths
+--------------------------------------------------------------------------------
+Delay (fastest path):   4.222ns (data path)
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U06/ff_led_kana_lock_LDC (LATCH)
+  Data Path Delay:      4.222ns (Levels of Logic = 1)
+  Source Clock:         msxpp/memclk rising at 0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/reset to msxpp/U06/ff_led_kana_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.198   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X20Y12.C1      net (fanout=967)      3.470   msxpp/reset
+    SLICE_X20Y12.CMUX    Tilo                  0.183   msxpp/U06/reset_Kana_AND_1198_o
+                                                       msxpp/U06/reset_Kana_AND_1197_o1
+    SLICE_X21Y12.CLK     net (fanout=2)        0.371   msxpp/U06/reset_Kana_AND_1197_o
+    -------------------------------------------------  ---------------------------
+    Total                                      4.222ns (0.381ns logic, 3.841ns route)
+                                                       (9.0% logic, 91.0% route)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_TO_msxppU06ff_led_scroll_lock_LDC = MAXDELAY TO TIMEGRP   
+      "TO_msxppU06ff_led_scroll_lock_LDC" TS_msxpp_U00_clkout0 DATAPATHONLY;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 4 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   7.493ns.
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U06/ff_led_scroll_lock_LDC (SLICE_X12Y11.CLK), 2 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  39.173ns (requirement - data path)
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U06/ff_led_scroll_lock_LDC (LATCH)
+  Requirement:          46.666ns
+  Data Path Delay:      7.493ns (Levels of Logic = 1)
+  Source Clock:         msxpp/memclk rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/reset to msxpp/U06/ff_led_scroll_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.430   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X13Y11.C4      net (fanout=967)      5.948   msxpp/reset
+    SLICE_X13Y11.CMUX    Tilo                  0.337   msxpp/U06/ff_led_scroll_lock_C
+                                                       msxpp/U06/reset_CmtScro_AND_1199_o1
+    SLICE_X12Y11.CLK     net (fanout=2)        0.778   msxpp/U06/reset_CmtScro_AND_1199_o
+    -------------------------------------------------  ---------------------------
+    Total                                      7.493ns (0.767ns logic, 6.726ns route)
+                                                       (10.2% logic, 89.8% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  42.983ns (requirement - data path)
+  Source:               msxpp/CmtScro (FF)
+  Destination:          msxpp/U06/ff_led_scroll_lock_LDC (LATCH)
+  Requirement:          46.666ns
+  Data Path Delay:      3.683ns (Levels of Logic = 1)
+  Source Clock:         sysclk rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/CmtScro to msxpp/U06/ff_led_scroll_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y14.AQ      Tcko                  0.430   msxpp/CmtScro
+                                                       msxpp/CmtScro
+    SLICE_X13Y11.C3      net (fanout=9)        2.138   msxpp/CmtScro
+    SLICE_X13Y11.CMUX    Tilo                  0.337   msxpp/U06/ff_led_scroll_lock_C
+                                                       msxpp/U06/reset_CmtScro_AND_1199_o1
+    SLICE_X12Y11.CLK     net (fanout=2)        0.778   msxpp/U06/reset_CmtScro_AND_1199_o
+    -------------------------------------------------  ---------------------------
+    Total                                      3.683ns (0.767ns logic, 2.916ns route)
+                                                       (20.8% logic, 79.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U06/ff_led_scroll_lock_LDC (SLICE_X12Y11.SR), 2 paths
+--------------------------------------------------------------------------------
+Slack (setup paths):    39.246ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U06/ff_led_scroll_lock_LDC (LATCH)
+  Requirement:          46.666ns
+  Data Path Delay:      7.420ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         msxpp/memclk rising at 0.000ns
+  Destination Clock:    msxpp/U06/reset_CmtScro_AND_1199_o falling
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/reset to msxpp/U06/ff_led_scroll_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.430   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X13Y11.C4      net (fanout=967)      5.948   msxpp/reset
+    SLICE_X13Y11.C       Tilo                  0.259   msxpp/U06/ff_led_scroll_lock_C
+                                                       msxpp/U06/reset_CmtScro_AND_1200_o1
+    SLICE_X12Y11.SR      net (fanout=2)        0.578   msxpp/U06/reset_CmtScro_AND_1200_o
+    SLICE_X12Y11.CLK     Trck                  0.205   msxpp/U06/ff_led_scroll_lock_LDC
+                                                       msxpp/U06/ff_led_scroll_lock_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      7.420ns (0.894ns logic, 6.526ns route)
+                                                       (12.0% logic, 88.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup paths):    43.056ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/CmtScro (FF)
+  Destination:          msxpp/U06/ff_led_scroll_lock_LDC (LATCH)
+  Requirement:          46.666ns
+  Data Path Delay:      3.610ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sysclk rising at 0.000ns
+  Destination Clock:    msxpp/U06/reset_CmtScro_AND_1199_o falling
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/CmtScro to msxpp/U06/ff_led_scroll_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y14.AQ      Tcko                  0.430   msxpp/CmtScro
+                                                       msxpp/CmtScro
+    SLICE_X13Y11.C3      net (fanout=9)        2.138   msxpp/CmtScro
+    SLICE_X13Y11.C       Tilo                  0.259   msxpp/U06/ff_led_scroll_lock_C
+                                                       msxpp/U06/reset_CmtScro_AND_1200_o1
+    SLICE_X12Y11.SR      net (fanout=2)        0.578   msxpp/U06/reset_CmtScro_AND_1200_o
+    SLICE_X12Y11.CLK     Trck                  0.205   msxpp/U06/ff_led_scroll_lock_LDC
+                                                       msxpp/U06/ff_led_scroll_lock_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      3.610ns (0.894ns logic, 2.716ns route)
+                                                       (24.8% logic, 75.2% route)
+
+--------------------------------------------------------------------------------
+Hold Paths: TS_TO_msxppU06ff_led_scroll_lock_LDC = MAXDELAY TO TIMEGRP         "TO_msxppU06ff_led_scroll_lock_LDC" TS_msxpp_U00_clkout0 DATAPATHONLY;
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U06/ff_led_scroll_lock_LDC (SLICE_X12Y11.SR), 2 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      1.998ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               msxpp/CmtScro (FF)
+  Destination:          msxpp/U06/ff_led_scroll_lock_LDC (LATCH)
+  Requirement:          0.000ns
+  Data Path Delay:      1.998ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         sysclk rising at 0.000ns
+  Destination Clock:    msxpp/U06/reset_CmtScro_AND_1199_o falling
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/CmtScro to msxpp/U06/ff_led_scroll_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y14.AQ      Tcko                  0.198   msxpp/CmtScro
+                                                       msxpp/CmtScro
+    SLICE_X13Y11.C3      net (fanout=9)        1.250   msxpp/CmtScro
+    SLICE_X13Y11.C       Tilo                  0.156   msxpp/U06/ff_led_scroll_lock_C
+                                                       msxpp/U06/reset_CmtScro_AND_1200_o1
+    SLICE_X12Y11.SR      net (fanout=2)        0.287   msxpp/U06/reset_CmtScro_AND_1200_o
+    SLICE_X12Y11.CLK     Tremck      (-Th)    -0.107   msxpp/U06/ff_led_scroll_lock_LDC
+                                                       msxpp/U06/ff_led_scroll_lock_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      1.998ns (0.461ns logic, 1.537ns route)
+                                                       (23.1% logic, 76.9% route)
+--------------------------------------------------------------------------------
+Slack (hold path):      4.168ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U06/ff_led_scroll_lock_LDC (LATCH)
+  Requirement:          0.000ns
+  Data Path Delay:      4.168ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         msxpp/memclk rising at 0.000ns
+  Destination Clock:    msxpp/U06/reset_CmtScro_AND_1199_o falling
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/reset to msxpp/U06/ff_led_scroll_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.198   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X13Y11.C4      net (fanout=967)      3.420   msxpp/reset
+    SLICE_X13Y11.C       Tilo                  0.156   msxpp/U06/ff_led_scroll_lock_C
+                                                       msxpp/U06/reset_CmtScro_AND_1200_o1
+    SLICE_X12Y11.SR      net (fanout=2)        0.287   msxpp/U06/reset_CmtScro_AND_1200_o
+    SLICE_X12Y11.CLK     Tremck      (-Th)    -0.107   msxpp/U06/ff_led_scroll_lock_LDC
+                                                       msxpp/U06/ff_led_scroll_lock_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      4.168ns (0.461ns logic, 3.707ns route)
+                                                       (11.1% logic, 88.9% route)
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U06/ff_led_scroll_lock_LDC (SLICE_X12Y11.CLK), 2 paths
+--------------------------------------------------------------------------------
+Delay (fastest path):   2.018ns (data path)
+  Source:               msxpp/CmtScro (FF)
+  Destination:          msxpp/U06/ff_led_scroll_lock_LDC (LATCH)
+  Data Path Delay:      2.018ns (Levels of Logic = 1)
+  Source Clock:         sysclk rising at 0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/CmtScro to msxpp/U06/ff_led_scroll_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y14.AQ      Tcko                  0.198   msxpp/CmtScro
+                                                       msxpp/CmtScro
+    SLICE_X13Y11.C3      net (fanout=9)        1.250   msxpp/CmtScro
+    SLICE_X13Y11.CMUX    Tilo                  0.203   msxpp/U06/ff_led_scroll_lock_C
+                                                       msxpp/U06/reset_CmtScro_AND_1199_o1
+    SLICE_X12Y11.CLK     net (fanout=2)        0.367   msxpp/U06/reset_CmtScro_AND_1199_o
+    -------------------------------------------------  ---------------------------
+    Total                                      2.018ns (0.401ns logic, 1.617ns route)
+                                                       (19.9% logic, 80.1% route)
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U06/ff_led_scroll_lock_LDC (SLICE_X12Y11.CLK), 2 paths
+--------------------------------------------------------------------------------
+Delay (fastest path):   4.188ns (data path)
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U06/ff_led_scroll_lock_LDC (LATCH)
+  Data Path Delay:      4.188ns (Levels of Logic = 1)
+  Source Clock:         msxpp/memclk rising at 0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/reset to msxpp/U06/ff_led_scroll_lock_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.198   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X13Y11.C4      net (fanout=967)      3.420   msxpp/reset
+    SLICE_X13Y11.CMUX    Tilo                  0.203   msxpp/U06/ff_led_scroll_lock_C
+                                                       msxpp/U06/reset_CmtScro_AND_1199_o1
+    SLICE_X12Y11.CLK     net (fanout=2)        0.367   msxpp/U06/reset_CmtScro_AND_1199_o
+    -------------------------------------------------  ---------------------------
+    Total                                      4.188ns (0.401ns logic, 3.787ns route)
+                                                       (9.6% logic, 90.4% route)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_TO_msxppU20U_VDP_REGISTERREG_R9_PAL_MODE_LDC = MAXDELAY 
+TO TIMEGRP         "TO_msxppU20U_VDP_REGISTERREG_R9_PAL_MODE_LDC" 
+TS_msxpp_U00_clkout0         DATAPATHONLY;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 4 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   7.880ns.
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (SLICE_X3Y19.CLK), 2 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  38.786ns (requirement - data path)
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (LATCH)
+  Requirement:          46.666ns
+  Data Path Delay:      7.880ns (Levels of Logic = 1)
+  Source Clock:         msxpp/memclk rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/reset to msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.430   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X2Y19.A5       net (fanout=967)      6.044   msxpp/reset
+    SLICE_X2Y19.AMUX     Tilo                  0.326   msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_C
+                                                       msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o1
+    SLICE_X3Y19.CLK      net (fanout=2)        1.080   msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o
+    -------------------------------------------------  ---------------------------
+    Total                                      7.880ns (0.756ns logic, 7.124ns route)
+                                                       (9.6% logic, 90.4% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  42.881ns (requirement - data path)
+  Source:               msxpp/U35/forced_v_mode (FF)
+  Destination:          msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (LATCH)
+  Requirement:          46.666ns
+  Data Path Delay:      3.785ns (Levels of Logic = 1)
+  Source Clock:         sysclk rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/U35/forced_v_mode to msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y20.AQ      Tcko                  0.525   msxpp/U35/forced_v_mode
+                                                       msxpp/U35/forced_v_mode
+    SLICE_X2Y19.A1       net (fanout=15)       1.854   msxpp/U35/forced_v_mode
+    SLICE_X2Y19.AMUX     Tilo                  0.326   msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_C
+                                                       msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o1
+    SLICE_X3Y19.CLK      net (fanout=2)        1.080   msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o
+    -------------------------------------------------  ---------------------------
+    Total                                      3.785ns (0.851ns logic, 2.934ns route)
+                                                       (22.5% logic, 77.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (SLICE_X3Y19.SR), 2 paths
+--------------------------------------------------------------------------------
+Slack (setup paths):    38.793ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (LATCH)
+  Requirement:          46.666ns
+  Data Path Delay:      7.873ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         msxpp/memclk rising at 0.000ns
+  Destination Clock:    msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o falling
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/reset to msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.430   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X2Y19.A5       net (fanout=967)      6.044   msxpp/reset
+    SLICE_X2Y19.A        Tilo                  0.254   msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_C
+                                                       msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1519_o1
+    SLICE_X3Y19.SR       net (fanout=2)        0.865   msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1519_o
+    SLICE_X3Y19.CLK      Trck                  0.280   msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+                                                       msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      7.873ns (0.964ns logic, 6.909ns route)
+                                                       (12.2% logic, 87.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup paths):    42.888ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               msxpp/U35/forced_v_mode (FF)
+  Destination:          msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (LATCH)
+  Requirement:          46.666ns
+  Data Path Delay:      3.778ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sysclk rising at 0.000ns
+  Destination Clock:    msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o falling
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path at Slow Process Corner: msxpp/U35/forced_v_mode to msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y20.AQ      Tcko                  0.525   msxpp/U35/forced_v_mode
+                                                       msxpp/U35/forced_v_mode
+    SLICE_X2Y19.A1       net (fanout=15)       1.854   msxpp/U35/forced_v_mode
+    SLICE_X2Y19.A        Tilo                  0.254   msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_C
+                                                       msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1519_o1
+    SLICE_X3Y19.SR       net (fanout=2)        0.865   msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1519_o
+    SLICE_X3Y19.CLK      Trck                  0.280   msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+                                                       msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      3.778ns (1.059ns logic, 2.719ns route)
+                                                       (28.0% logic, 72.0% route)
+
+--------------------------------------------------------------------------------
+Hold Paths: TS_TO_msxppU20U_VDP_REGISTERREG_R9_PAL_MODE_LDC = MAXDELAY TO TIMEGRP         "TO_msxppU20U_VDP_REGISTERREG_R9_PAL_MODE_LDC" TS_msxpp_U00_clkout0         DATAPATHONLY;
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (SLICE_X3Y19.SR), 2 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      2.022ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               msxpp/U35/forced_v_mode (FF)
+  Destination:          msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (LATCH)
+  Requirement:          0.000ns
+  Data Path Delay:      2.022ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         sysclk rising at 0.000ns
+  Destination Clock:    msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o falling
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/U35/forced_v_mode to msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y20.AQ      Tcko                  0.234   msxpp/U35/forced_v_mode
+                                                       msxpp/U35/forced_v_mode
+    SLICE_X2Y19.A1       net (fanout=15)       1.052   msxpp/U35/forced_v_mode
+    SLICE_X2Y19.A        Tilo                  0.156   msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_C
+                                                       msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1519_o1
+    SLICE_X3Y19.SR       net (fanout=2)        0.425   msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1519_o
+    SLICE_X3Y19.CLK      Tremck      (-Th)    -0.155   msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+                                                       msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      2.022ns (0.545ns logic, 1.477ns route)
+                                                       (27.0% logic, 73.0% route)
+--------------------------------------------------------------------------------
+Slack (hold path):      4.447ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (LATCH)
+  Requirement:          0.000ns
+  Data Path Delay:      4.447ns (Levels of Logic = 1)
+  Positive Clock Path Skew: 0.000ns
+  Source Clock:         msxpp/memclk rising at 0.000ns
+  Destination Clock:    msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o falling
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/reset to msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.198   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X2Y19.A5       net (fanout=967)      3.513   msxpp/reset
+    SLICE_X2Y19.A        Tilo                  0.156   msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_C
+                                                       msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1519_o1
+    SLICE_X3Y19.SR       net (fanout=2)        0.425   msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1519_o
+    SLICE_X3Y19.CLK      Tremck      (-Th)    -0.155   msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+                                                       msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+    -------------------------------------------------  ---------------------------
+    Total                                      4.447ns (0.509ns logic, 3.938ns route)
+                                                       (11.4% logic, 88.6% route)
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (SLICE_X3Y19.CLK), 2 paths
+--------------------------------------------------------------------------------
+Delay (fastest path):   1.993ns (data path)
+  Source:               msxpp/U35/forced_v_mode (FF)
+  Destination:          msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (LATCH)
+  Data Path Delay:      1.993ns (Levels of Logic = 1)
+  Source Clock:         sysclk rising at 0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/U35/forced_v_mode to msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y20.AQ      Tcko                  0.234   msxpp/U35/forced_v_mode
+                                                       msxpp/U35/forced_v_mode
+    SLICE_X2Y19.A1       net (fanout=15)       1.052   msxpp/U35/forced_v_mode
+    SLICE_X2Y19.AMUX     Tilo                  0.191   msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_C
+                                                       msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o1
+    SLICE_X3Y19.CLK      net (fanout=2)        0.516   msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o
+    -------------------------------------------------  ---------------------------
+    Total                                      1.993ns (0.425ns logic, 1.568ns route)
+                                                       (21.3% logic, 78.7% route)
+--------------------------------------------------------------------------------
+
+Paths for end point msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (SLICE_X3Y19.CLK), 2 paths
+--------------------------------------------------------------------------------
+Delay (fastest path):   4.418ns (data path)
+  Source:               msxpp/reset (FF)
+  Destination:          msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC (LATCH)
+  Data Path Delay:      4.418ns (Levels of Logic = 1)
+  Source Clock:         msxpp/memclk rising at 0.000ns
+
+  Minimum Data Path at Fast Process Corner: msxpp/reset to msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_LDC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X27Y67.CQ      Tcko                  0.198   msxpp/reset
+                                                       msxpp/reset
+    SLICE_X2Y19.A5       net (fanout=967)      3.513   msxpp/reset
+    SLICE_X2Y19.AMUX     Tilo                  0.191   msxpp/U20/U_VDP_REGISTER/REG_R9_PAL_MODE_C
+                                                       msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o1
+    SLICE_X3Y19.CLK      net (fanout=2)        0.516   msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o
+    -------------------------------------------------  ---------------------------
+    Total                                      4.418ns (0.389ns logic, 4.029ns route)
+                                                       (8.8% logic, 91.2% route)
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_clk50
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk50                       |     20.000ns|      5.000ns| 181809.613ns|            0|          186|            0|     24941411|
+| TS_msxpp_U00_clkout1          |     11.667ns| 106055.608ns|          N/A|          186|            0|        11670|            0|
+| TS_msxpp_U00_clkout0          |     46.667ns|     43.069ns|      7.880ns|            0|            0|     24929729|           12|
+|  TS_TO_msxppU06ff_led_kana_loc|     46.667ns|      7.571ns|          N/A|            0|            0|            4|            0|
+|  k_LDC                        |             |             |             |             |             |             |             |
+|  TS_TO_msxppU06ff_led_scroll_l|     46.667ns|      7.493ns|          N/A|            0|            0|            4|            0|
+|  ock_LDC                      |             |             |             |             |             |             |             |
+|  TS_TO_msxppU20U_VDP_REGISTERR|     46.667ns|      7.880ns|          N/A|            0|            0|            4|            0|
+|  EG_R9_PAL_MODE_LDC           |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clock_50_i
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock_50_i     |   27.221|    8.000|    6.582|    2.562|
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 186  Score: 826143  (Setup/Max: 826143, Hold: 0)
+
+Constraints cover 24941411 paths, 0 nets, and 51954 connections
+
+Design statistics:
+   Minimum period: 106055.609ns{1}   (Maximum frequency:   0.009MHz)
+   Maximum path delay from/to any node:   7.880ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Jun 30 11:33:39 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 622 MB
+
+
+

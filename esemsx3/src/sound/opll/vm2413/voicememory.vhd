@@ -51,7 +51,10 @@ architecture RTL of VoiceMemory is
 
   -- The following array is mapped into a Single-Clock Synchronous RAM with two-read
   -- addresses by Altera's Quartus II compiler.
-  type VOICE_ARRAY_TYPE is array (VOICE_ID_TYPE'range) of VOICE_VECTOR_TYPE;
+  --Max
+  --type VOICE_ARRAY_TYPE is array (VOICE_ID_TYPE'range) of VOICE_VECTOR_TYPE;
+  type VOICE_ARRAY_TYPE is array (0 to 37) of VOICE_VECTOR_TYPE;
+  
   signal voices : VOICE_ARRAY_TYPE;
 
   component VoiceRom port (

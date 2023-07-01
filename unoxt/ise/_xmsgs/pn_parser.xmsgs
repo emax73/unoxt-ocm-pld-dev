@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/cpu/t80.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/cpu/t80_alu.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/cpu/t80_mcode.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/cpu/t80_pack.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/cpu/t80_reg.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/cpu/t80a.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/eseps2.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/fifo.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/kanji.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/keymap.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/mapper.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/megasd.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/midi.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/ram.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/rtc.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/swioports.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/systemtimer.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/uart.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/wifi_lite.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/dac/esepwm.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/filter/esefir5.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/filter/tapram.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/lpf/lpf.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/eseopll.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/attacktable.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/controller.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/envelopegenerator.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/envelopememory.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/feedbackmemory.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/lineartable.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/operator.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/opll.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/outputgenerator.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/outputmemory.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/phasegenerator.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/phasememory.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/registermemory.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/sinetable.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/slotcounter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/temporalmixer.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/vm2413.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/voicememory.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/opll/vm2413/voicerom.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/psg/psg.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/psg/psg_wave.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/scc/megaram.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/scc/scc_wave.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/sound/tr_pcm/tr_pcm.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_colordec.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_command.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_doublebuf.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_graphic123m.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_graphic4567.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_hvcounter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_interrupt.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_linebuf.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_ntsc_pal.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_package.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_register.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_spinforam.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_sprite.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_ssg.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_text12.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_vga.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vdp_wait_control.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/video/vencode.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/src/iplrom_512k.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/src/joystick.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/src/leds.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/src/unoxt_top.v&quot; into library work</arg>
+</msg>
+
+</messages>
+
