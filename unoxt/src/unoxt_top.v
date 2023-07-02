@@ -212,7 +212,7 @@
       .pVideoVS_n(vsync_o)			// Audio(RGB15K), VSync(VGA31K)
 );
 
-	assign dips = {1'b0,1'b1,2'b01,1'b0,2'b10,1'b0};            // 8=Mega_Sd / 7=Interal_Mapper / 6:5=Slot2 / 4=Slot1 / 
+	assign dips = {1'b0,1'b1,2'b01,1'b0,2'b10,1'b0};// 8=Mega_Sd / 7=Interal_Mapper / 6:5=Slot2 / 4=Slot1 / 3:2=Video (No se usa) / 1:Turbo-- 0=On,    1=Off (default on shipment)
 	assign redLed = 1'b1;
 	assign yellowLed = leds[2];
 	//assign greenLed = leds[1];
