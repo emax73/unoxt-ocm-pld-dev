@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Reading design: unoxt2_top.prj
@@ -319,12 +319,12 @@ Parsing architecture <rtl> of entity <t80a>.
 Parsing VHDL file "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" into library work
 Parsing entity <emsx_top>.
 Parsing architecture <RTL> of entity <emsx_top>.
-INFO:HDLCompiler:1676 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 277. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
-WARNING:HDLCompiler:946 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2644: Actual for formal port reset_n is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2728: Actual for formal port vdpspeedmode is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2774: Actual for formal port reset is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2789: Actual for formal port reset is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2797: Actual for formal port reset is neither a static name nor a globally static expression
+INFO:HDLCompiler:1676 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 281. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+WARNING:HDLCompiler:946 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2654: Actual for formal port reset_n is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2742: Actual for formal port vdpspeedmode is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2788: Actual for formal port reset is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2803: Actual for formal port reset is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2811: Actual for formal port reset is neither a static name nor a globally static expression
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -334,9 +334,9 @@ Elaborating module <unoxt2_top>.
 Going to vhdl side to elaborate module emsx_top
 
 Elaborating entity <emsx_top> (architecture <RTL>) with generics from library <work>.
-WARNING:HDLCompiler:871 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 1019: Using initial value "11111111" for esp_dout_s since it is never assigned
-WARNING:HDLCompiler:871 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 1020: Using initial value '1' for esp_wait_s since it is never assigned
-WARNING:HDLCompiler:871 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 1027: Using initial value "11111111" for midi_dout_s since it is never assigned
+WARNING:HDLCompiler:871 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 1023: Using initial value "11111111" for esp_dout_s since it is never assigned
+WARNING:HDLCompiler:871 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 1024: Using initial value '1' for esp_wait_s since it is never assigned
+WARNING:HDLCompiler:871 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 1031: Using initial value "11111111" for midi_dout_s since it is never assigned
 
 Elaborating entity <scc_mix_mul> (architecture <rtl>) from library <work>.
 Going to verilog side to elaborate module pll4x
@@ -387,7 +387,7 @@ Going to vhdl side to elaborate module keymap
 Elaborating entity <keymap> (architecture <RTL>) from library <work>.
 Back to verilog to continue elaboration
 Back to vhdl to continue elaboration
-WARNING:HDLCompiler:439 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 277: Formal port fkeys of mode out cannot be associated with actual port fkeys of mode buffer
+WARNING:HDLCompiler:439 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 281: Formal port fkeys of mode out cannot be associated with actual port fkeys of mode buffer
 INFO:HDLCompiler:1408 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/eseps2.v" Line 57. fkeys is declared here
 Going to verilog side to elaborate module rtc
 
@@ -522,7 +522,7 @@ Elaborating entity <esepwm> (architecture <RTL>) with generics from library <wor
 Elaborating entity <esefir5> (architecture <rtl>) with generics from library <work>.
 
 Elaborating entity <tapram> (architecture <RTL>) with generics from library <work>.
-WARNING:HDLCompiler:439 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 611: Formal port mapper0_ack of mode inout cannot be associated with actual port mapper0_ack of mode out
+WARNING:HDLCompiler:439 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 615: Formal port mapper0_ack of mode inout cannot be associated with actual port mapper0_ack of mode out
 INFO:HDLCompiler:1408 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/swioports.vhd" Line 117. mapper0_ack is declared here
 
 Elaborating entity <switched_io_ports> (architecture <RTL>) from library <work>.
@@ -534,9 +534,9 @@ Going to verilog side to elaborate module tr_pcm
 
 Elaborating module <tr_pcm>.
 Back to vhdl to continue elaboration
-WARNING:HDLCompiler:634 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 808: Net <EPC_DO> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 812: Net <EPC_DO> does not have a driver.
 Back to verilog to continue elaboration
-WARNING:HDLCompiler:1127 - "/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/src/unoxt_top.v" Line 226: Assignment to joy1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/src/unoxt_top.v" Line 228: Assignment to joy1 ignored, since the identifier is never used
 
 Elaborating module <ledPWM>.
 WARNING:HDLCompiler:552 - "/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/src/unoxt_top.v" Line 153: Input port pExtClk is not connected on this instance
@@ -614,28 +614,28 @@ WARNING:Xst:647 - Input <pIopRsv18> is never used. This port will be preserved a
 WARNING:Xst:647 - Input <pIopRsv19> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <pIopRsv20> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <pIopRsv21> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2642: Output port <HALT_n> of the instance <U01> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2642: Output port <BUSAK_n> of the instance <U01> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2666: Output port <debug> of the instance <U03> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2666: Output port <epc_ck> of the instance <U03> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2666: Output port <epc_cs> of the instance <U03> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2666: Output port <epc_oe> of the instance <U03> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2666: Output port <epc_di> of the instance <U03> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2705: Output port <ramdbo> of the instance <U05> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2705: Output port <ack> of the instance <U05> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2713: Output port <ack> of the instance <U07> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2716: Output port <ramdbo> of the instance <U08> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2716: Output port <ack> of the instance <U08> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2720: Output port <ACK> of the instance <U20> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2720: Output port <PRAMOE_N> of the instance <U20> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2720: Output port <BLANK_O> of the instance <U20> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2736: Output port <ack> of the instance <U30> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2740: Output port <ramdbo> of the instance <U31_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2740: Output port <wavr> of the instance <U31_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2746: Output port <ramdbo> of the instance <U31_2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2746: Output port <wavr> of the instance <U31_2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2811: Output port <ack> of the instance <U35> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2898: Output port <ack> of the instance <U40> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2652: Output port <HALT_n> of the instance <U01> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2652: Output port <BUSAK_n> of the instance <U01> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2680: Output port <debug> of the instance <U03> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2680: Output port <epc_ck> of the instance <U03> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2680: Output port <epc_cs> of the instance <U03> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2680: Output port <epc_oe> of the instance <U03> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2680: Output port <epc_di> of the instance <U03> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2719: Output port <ramdbo> of the instance <U05> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2719: Output port <ack> of the instance <U05> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2727: Output port <ack> of the instance <U07> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2730: Output port <ramdbo> of the instance <U08> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2730: Output port <ack> of the instance <U08> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2734: Output port <ACK> of the instance <U20> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2734: Output port <PRAMOE_N> of the instance <U20> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2734: Output port <BLANK_O> of the instance <U20> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2750: Output port <ack> of the instance <U30> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2754: Output port <ramdbo> of the instance <U31_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2754: Output port <wavr> of the instance <U31_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2760: Output port <ramdbo> of the instance <U31_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2760: Output port <wavr> of the instance <U31_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2825: Output port <ack> of the instance <U35> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" line 2912: Output port <ack> of the instance <U40> is unconnected or connected to loadless signal.
 Always blocking tristate driving signal <pSltWait_n> is removed.
 WARNING:Xst:2935 - Signal 'pUsbN1', unconnected in block 'emsx_top', is tied to its initial value (z).
 WARNING:Xst:653 - Signal <EPC_DO> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -754,122 +754,122 @@ WARNING:Xst:653 - Signal <EPC_DO> is used but never assigned. This sourceless si
     Found 8-bit register for signal <vram_page>.
     Found 1-bit register for signal <portF4_bit7>.
     Found 1-bit register for signal <ff_dip_req>.
-    Found 16-bit adder for signal <FreeCounter[15]_GND_8_o_add_52_OUT> created at line 1270.
-    Found 5-bit adder for signal <RstSeq[4]_GND_8_o_add_67_OUT> created at line 1307.
-    Found 21-bit adder for signal <ff_clk21m_cnt[20]_GND_8_o_add_73_OUT> created at line 1354.
-    Found 9-bit adder for signal <GND_8_o_GND_8_o_add_249_OUT> created at line 2134.
-    Found 4-bit adder for signal <n1252> created at line 2140.
-    Found 3-bit adder for signal <GND_8_o_GND_8_o_add_256_OUT> created at line 2140.
-    Found 13-bit adder for signal <GND_8_o_GND_8_o_add_258_OUT> created at line 2140.
-    Found 13-bit adder for signal <GND_8_o_GND_8_o_add_264_OUT> created at line 2143.
-    Found 13-bit adder for signal <GND_8_o_GND_8_o_add_269_OUT> created at line 2146.
-    Found 16-bit adder for signal <Scc1AmpL[14]_Scc2AmpL[14]_add_273_OUT> created at line 2150.
-    Found 4-bit adder for signal <n1270> created at line 2156.
-    Found 3-bit adder for signal <GND_8_o_GND_8_o_add_282_OUT> created at line 2159.
-    Found 3-bit adder for signal <GND_8_o_PWR_8_o_add_284_OUT> created at line 2162.
-    Found 4-bit adder for signal <n1286> created at line 2181.
-    Found 3-bit adder for signal <GND_8_o_GND_8_o_add_318_OUT> created at line 2183.
-    Found 3-bit adder for signal <GND_8_o_PWR_8_o_add_322_OUT> created at line 2185.
-    Found 16-bit adder for signal <PWR_8_o_GND_8_o_add_327_OUT> created at line 2187.
-    Found 16-bit adder for signal <n1541> created at line 2213.
-    Found 16-bit adder for signal <n1544> created at line 2213.
-    Found 16-bit adder for signal <ff_psg[15]_ff_tr_pcm[15]_add_350_OUT> created at line 2213.
-    Found 3-bit adder for signal <ff_sdr_seq[2]_GND_8_o_add_453_OUT> created at line 2585.
-    Found 2-bit subtractor for signal <GND_8_o_GND_8_o_sub_4_OUT<1:0>> created at line 1073.
-    Found 2-bit subtractor for signal <GND_8_o_GND_8_o_sub_7_OUT<1:0>> created at line 1084.
-    Found 3-bit subtractor for signal <GND_8_o_GND_8_o_sub_11_OUT<2:0>> created at line 1098.
-    Found 3-bit subtractor for signal <GND_8_o_GND_8_o_sub_19_OUT<2:0>> created at line 1114.
-    Found 6-bit subtractor for signal <GND_8_o_GND_8_o_sub_27_OUT<5:0>> created at line 1150.
-    Found 2-bit subtractor for signal <GND_8_o_GND_8_o_sub_48_OUT<1:0>> created at line 1248.
-    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_59_OUT<3:0>> created at line 1289.
-    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_80_OUT<3:0>> created at line 1394.
-    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_251_OUT<3:0>> created at line 2135.
-    Found 3-bit subtractor for signal <n1507> created at line 0.
-    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_275_OUT<3:0>> created at line 2151.
-    Found 3-bit subtractor for signal <n1526> created at line 0.
-    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_289_OUT<3:0>> created at line 2167.
-    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_303_OUT<9:0>> created at line 2176.
-    Found 16-bit subtractor for signal <GND_8_o_GND_8_o_sub_309_OUT<15:0>> created at line 2178.
-    Found 16-bit subtractor for signal <GND_8_o_GND_8_o_sub_310_OUT<15:0>> created at line 2178.
-    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_321_OUT<9:0>> created at line 2185.
-    Found 3-bit subtractor for signal <n1532> created at line 0.
-    Found 16-bit subtractor for signal <n1536> created at line 0.
-    Found 3-bit adder for signal <GND_8_o_GND_8_o_add_267_OUT> created at line 2146.
-    Found 3-bit adder for signal <GND_8_o_GND_8_o_add_262_OUT> created at line 2143.
-    Found 9x3-bit multiplier for signal <ff_prepsg[8]_GND_8_o_MuLt_257_OUT> created at line 2140.
-    Found 8x3-bit multiplier for signal <ff_prepsg[8]_GND_8_o_MuLt_263_OUT> created at line 2143.
-    Found 7x3-bit multiplier for signal <ff_prepsg[8]_GND_8_o_MuLt_268_OUT> created at line 2146.
-    Found 10x3-bit multiplier for signal <GND_8_o_GND_8_o_MuLt_296_OUT> created at line 2172.
-    Found 10x3-bit multiplier for signal <GND_8_o_GND_8_o_MuLt_301_OUT> created at line 2174.
-    Found 10x3-bit multiplier for signal <GND_8_o_GND_8_o_MuLt_305_OUT> created at line 2176.
-    Found 10x3-bit multiplier for signal <GND_8_o_GND_8_o_MuLt_314_OUT> created at line 2181.
-    Found 10x3-bit multiplier for signal <GND_8_o_GND_8_o_MuLt_319_OUT> created at line 2183.
-    Found 10x3-bit multiplier for signal <GND_8_o_GND_8_o_MuLt_323_OUT> created at line 2185.
+    Found 16-bit adder for signal <FreeCounter[15]_GND_8_o_add_52_OUT> created at line 1277.
+    Found 5-bit adder for signal <RstSeq[4]_GND_8_o_add_67_OUT> created at line 1314.
+    Found 21-bit adder for signal <ff_clk21m_cnt[20]_GND_8_o_add_73_OUT> created at line 1361.
+    Found 9-bit adder for signal <GND_8_o_GND_8_o_add_249_OUT> created at line 2144.
+    Found 4-bit adder for signal <n1255> created at line 2150.
+    Found 3-bit adder for signal <GND_8_o_GND_8_o_add_256_OUT> created at line 2150.
+    Found 13-bit adder for signal <GND_8_o_GND_8_o_add_258_OUT> created at line 2150.
+    Found 13-bit adder for signal <GND_8_o_GND_8_o_add_264_OUT> created at line 2153.
+    Found 13-bit adder for signal <GND_8_o_GND_8_o_add_269_OUT> created at line 2156.
+    Found 16-bit adder for signal <Scc1AmpL[14]_Scc2AmpL[14]_add_273_OUT> created at line 2160.
+    Found 4-bit adder for signal <n1273> created at line 2166.
+    Found 3-bit adder for signal <GND_8_o_GND_8_o_add_282_OUT> created at line 2169.
+    Found 3-bit adder for signal <GND_8_o_PWR_8_o_add_284_OUT> created at line 2172.
+    Found 4-bit adder for signal <n1289> created at line 2191.
+    Found 3-bit adder for signal <GND_8_o_GND_8_o_add_318_OUT> created at line 2193.
+    Found 3-bit adder for signal <GND_8_o_PWR_8_o_add_322_OUT> created at line 2195.
+    Found 16-bit adder for signal <PWR_8_o_GND_8_o_add_327_OUT> created at line 2197.
+    Found 16-bit adder for signal <n1545> created at line 2223.
+    Found 16-bit adder for signal <n1548> created at line 2223.
+    Found 16-bit adder for signal <ff_psg[15]_ff_tr_pcm[15]_add_350_OUT> created at line 2223.
+    Found 3-bit adder for signal <ff_sdr_seq[2]_GND_8_o_add_453_OUT> created at line 2595.
+    Found 2-bit subtractor for signal <GND_8_o_GND_8_o_sub_4_OUT<1:0>> created at line 1077.
+    Found 2-bit subtractor for signal <GND_8_o_GND_8_o_sub_7_OUT<1:0>> created at line 1088.
+    Found 3-bit subtractor for signal <GND_8_o_GND_8_o_sub_11_OUT<2:0>> created at line 1102.
+    Found 3-bit subtractor for signal <GND_8_o_GND_8_o_sub_19_OUT<2:0>> created at line 1118.
+    Found 6-bit subtractor for signal <GND_8_o_GND_8_o_sub_27_OUT<5:0>> created at line 1154.
+    Found 2-bit subtractor for signal <GND_8_o_GND_8_o_sub_48_OUT<1:0>> created at line 1255.
+    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_59_OUT<3:0>> created at line 1296.
+    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_80_OUT<3:0>> created at line 1401.
+    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_251_OUT<3:0>> created at line 2145.
+    Found 3-bit subtractor for signal <n1511> created at line 0.
+    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_275_OUT<3:0>> created at line 2161.
+    Found 3-bit subtractor for signal <n1530> created at line 0.
+    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_289_OUT<3:0>> created at line 2177.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_303_OUT<9:0>> created at line 2186.
+    Found 16-bit subtractor for signal <GND_8_o_GND_8_o_sub_309_OUT<15:0>> created at line 2188.
+    Found 16-bit subtractor for signal <GND_8_o_GND_8_o_sub_310_OUT<15:0>> created at line 2188.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_321_OUT<9:0>> created at line 2195.
+    Found 3-bit subtractor for signal <n1536> created at line 0.
+    Found 16-bit subtractor for signal <n1540> created at line 0.
+    Found 3-bit adder for signal <GND_8_o_GND_8_o_add_262_OUT> created at line 2153.
+    Found 3-bit adder for signal <GND_8_o_GND_8_o_add_267_OUT> created at line 2156.
+    Found 9x3-bit multiplier for signal <ff_prepsg[8]_GND_8_o_MuLt_257_OUT> created at line 2150.
+    Found 8x3-bit multiplier for signal <ff_prepsg[8]_GND_8_o_MuLt_263_OUT> created at line 2153.
+    Found 7x3-bit multiplier for signal <ff_prepsg[8]_GND_8_o_MuLt_268_OUT> created at line 2156.
+    Found 10x3-bit multiplier for signal <GND_8_o_GND_8_o_MuLt_296_OUT> created at line 2182.
+    Found 10x3-bit multiplier for signal <GND_8_o_GND_8_o_MuLt_301_OUT> created at line 2184.
+    Found 10x3-bit multiplier for signal <GND_8_o_GND_8_o_MuLt_305_OUT> created at line 2186.
+    Found 10x3-bit multiplier for signal <GND_8_o_GND_8_o_MuLt_314_OUT> created at line 2191.
+    Found 10x3-bit multiplier for signal <GND_8_o_GND_8_o_MuLt_319_OUT> created at line 2193.
+    Found 10x3-bit multiplier for signal <GND_8_o_GND_8_o_MuLt_323_OUT> created at line 2195.
     Found 8x7-bit Read Only RAM for signal <LevCtrl[2]_PWR_8_o_wide_mux_83_OUT>
     Found 4x4-bit Read Only RAM for signal <w_page_dec>
     Found 4x1-bit Read Only RAM for signal <DisplayMode[1]_PWR_13_o_Mux_247_o>
     Found 4x4-bit Read Only RAM for signal <GND_8_o_GND_8_o_mux_402_OUT>
-    Found 8-bit 8-to-1 multiplexer for signal <dbo[3]_dbo[0]_wide_mux_169_OUT> created at line 1805.
-    Found 2-bit 4-to-1 multiplexer for signal <PriSltNum> created at line 1867.
-    Found 8-bit 4-to-1 multiplexer for signal <ExpDbi> created at line 1888.
-    Found 1-bit 4-to-1 multiplexer for signal <ExpSltNum3<1>> created at line 1917.
-    Found 1-bit 4-to-1 multiplexer for signal <ExpSltNum3<0>> created at line 1917.
-    Found 1-bit 4-to-1 multiplexer for signal <ExpSltNum0<1>> created at line 1910.
-    Found 1-bit 4-to-1 multiplexer for signal <ExpSltNum0<0>> created at line 1910.
-    Found 8-bit 4-to-1 multiplexer for signal <PpiDbi> created at line 819.
-    Found 1-bit tristate buffer for signal <pSltInt_n> created at line 1497
-    Found 1-bit tristate buffer for signal <pSltBdir_n> created at line 1508
-    Found 1-bit tristate buffer for signal <pSltDat<7>> created at line 1518
-    Found 1-bit tristate buffer for signal <pSltDat<6>> created at line 1518
-    Found 1-bit tristate buffer for signal <pSltDat<5>> created at line 1518
-    Found 1-bit tristate buffer for signal <pSltDat<4>> created at line 1518
-    Found 1-bit tristate buffer for signal <pSltDat<3>> created at line 1518
-    Found 1-bit tristate buffer for signal <pSltDat<2>> created at line 1518
-    Found 1-bit tristate buffer for signal <pSltDat<1>> created at line 1518
-    Found 1-bit tristate buffer for signal <pSltDat<0>> created at line 1518
-    Found 1-bit tristate buffer for signal <pSltRsv5> created at line 1521
-    Found 1-bit tristate buffer for signal <pSltRsv16> created at line 1522
-    Found 1-bit tristate buffer for signal <pSltSw1> created at line 1524
-    Found 1-bit tristate buffer for signal <pSltSw2> created at line 1525
-    Found 1-bit tristate buffer for signal <pVideoHS_n> created at line 2006
-    Found 1-bit tristate buffer for signal <pVideoClk> created at line 2093
-    Found 1-bit tristate buffer for signal <pVideoDat> created at line 2094
-    Found 1-bit tristate buffer for signal <pDac_SL<5>> created at line 2228
-    Found 1-bit tristate buffer for signal <pDac_SL<4>> created at line 2228
-    Found 1-bit tristate buffer for signal <pDac_SL<3>> created at line 2228
-    Found 1-bit tristate buffer for signal <pDac_SL<2>> created at line 2228
-    Found 1-bit tristate buffer for signal <pDac_SL<1>> created at line 2228
-    Found 1-bit tristate buffer for signal <pDac_SL<0>> created at line 2228
-    Found 1-bit tristate buffer for signal <pDac_SR<5>> created at line 2233
-    Found 1-bit tristate buffer for signal <pDac_SR<4>> created at line 2233
-    Found 1-bit tristate buffer for signal <pDac_SR<3>> created at line 2233
-    Found 1-bit tristate buffer for signal <pDac_SR<2>> created at line 2233
-    Found 1-bit tristate buffer for signal <pDac_SR<1>> created at line 2233
-    Found 1-bit tristate buffer for signal <SdrDat<15>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<14>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<13>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<12>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<11>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<10>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<9>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<8>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<7>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<6>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<5>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<4>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<3>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<2>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<1>> created at line 2520
-    Found 1-bit tristate buffer for signal <SdrDat<0>> created at line 2520
-    Found 1-bit tristate buffer for signal <pUsbP2> created at line 2625
-    Found 1-bit tristate buffer for signal <pUsbN2> created at line 2626
-    Found 4-bit comparator greater for signal <PWR_8_o_GND_8_o_LessThan_254_o> created at line 2138
-    Found 4-bit comparator greater for signal <PWR_8_o_GND_8_o_LessThan_260_o> created at line 2141
-    Found 4-bit comparator greater for signal <PWR_8_o_GND_8_o_LessThan_278_o> created at line 2155
-    Found 4-bit comparator greater for signal <PWR_8_o_GND_8_o_LessThan_281_o> created at line 2158
-    Found 10-bit comparator greater for signal <OpllAmp[9]_PWR_8_o_LessThan_292_o> created at line 2170
-    Found 4-bit comparator greater for signal <PWR_8_o_GND_8_o_LessThan_311_o> created at line 2180
-    Found 4-bit comparator greater for signal <PWR_8_o_GND_8_o_LessThan_316_o> created at line 2182
+    Found 8-bit 8-to-1 multiplexer for signal <dbo[3]_dbo[0]_wide_mux_169_OUT> created at line 1812.
+    Found 2-bit 4-to-1 multiplexer for signal <PriSltNum> created at line 1874.
+    Found 8-bit 4-to-1 multiplexer for signal <ExpDbi> created at line 1895.
+    Found 1-bit 4-to-1 multiplexer for signal <ExpSltNum0<1>> created at line 1917.
+    Found 1-bit 4-to-1 multiplexer for signal <ExpSltNum0<0>> created at line 1917.
+    Found 1-bit 4-to-1 multiplexer for signal <ExpSltNum3<1>> created at line 1924.
+    Found 1-bit 4-to-1 multiplexer for signal <ExpSltNum3<0>> created at line 1924.
+    Found 8-bit 4-to-1 multiplexer for signal <PpiDbi> created at line 823.
+    Found 1-bit tristate buffer for signal <pSltInt_n> created at line 1504
+    Found 1-bit tristate buffer for signal <pSltBdir_n> created at line 1515
+    Found 1-bit tristate buffer for signal <pSltDat<7>> created at line 1525
+    Found 1-bit tristate buffer for signal <pSltDat<6>> created at line 1525
+    Found 1-bit tristate buffer for signal <pSltDat<5>> created at line 1525
+    Found 1-bit tristate buffer for signal <pSltDat<4>> created at line 1525
+    Found 1-bit tristate buffer for signal <pSltDat<3>> created at line 1525
+    Found 1-bit tristate buffer for signal <pSltDat<2>> created at line 1525
+    Found 1-bit tristate buffer for signal <pSltDat<1>> created at line 1525
+    Found 1-bit tristate buffer for signal <pSltDat<0>> created at line 1525
+    Found 1-bit tristate buffer for signal <pSltRsv5> created at line 1528
+    Found 1-bit tristate buffer for signal <pSltRsv16> created at line 1529
+    Found 1-bit tristate buffer for signal <pSltSw1> created at line 1531
+    Found 1-bit tristate buffer for signal <pSltSw2> created at line 1532
+    Found 1-bit tristate buffer for signal <pVideoHS_n> created at line 2016
+    Found 1-bit tristate buffer for signal <pVideoClk> created at line 2103
+    Found 1-bit tristate buffer for signal <pVideoDat> created at line 2104
+    Found 1-bit tristate buffer for signal <pDac_SL<5>> created at line 2238
+    Found 1-bit tristate buffer for signal <pDac_SL<4>> created at line 2238
+    Found 1-bit tristate buffer for signal <pDac_SL<3>> created at line 2238
+    Found 1-bit tristate buffer for signal <pDac_SL<2>> created at line 2238
+    Found 1-bit tristate buffer for signal <pDac_SL<1>> created at line 2238
+    Found 1-bit tristate buffer for signal <pDac_SL<0>> created at line 2238
+    Found 1-bit tristate buffer for signal <pDac_SR<5>> created at line 2243
+    Found 1-bit tristate buffer for signal <pDac_SR<4>> created at line 2243
+    Found 1-bit tristate buffer for signal <pDac_SR<3>> created at line 2243
+    Found 1-bit tristate buffer for signal <pDac_SR<2>> created at line 2243
+    Found 1-bit tristate buffer for signal <pDac_SR<1>> created at line 2243
+    Found 1-bit tristate buffer for signal <SdrDat<15>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<14>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<13>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<12>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<11>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<10>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<9>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<8>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<7>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<6>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<5>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<4>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<3>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<2>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<1>> created at line 2530
+    Found 1-bit tristate buffer for signal <SdrDat<0>> created at line 2530
+    Found 1-bit tristate buffer for signal <pUsbP2> created at line 2635
+    Found 1-bit tristate buffer for signal <pUsbN2> created at line 2636
+    Found 4-bit comparator greater for signal <PWR_8_o_GND_8_o_LessThan_254_o> created at line 2148
+    Found 4-bit comparator greater for signal <PWR_8_o_GND_8_o_LessThan_260_o> created at line 2151
+    Found 4-bit comparator greater for signal <PWR_8_o_GND_8_o_LessThan_278_o> created at line 2165
+    Found 4-bit comparator greater for signal <PWR_8_o_GND_8_o_LessThan_281_o> created at line 2168
+    Found 10-bit comparator greater for signal <OpllAmp[9]_PWR_8_o_LessThan_292_o> created at line 2180
+    Found 4-bit comparator greater for signal <PWR_8_o_GND_8_o_LessThan_311_o> created at line 2190
+    Found 4-bit comparator greater for signal <PWR_8_o_GND_8_o_LessThan_316_o> created at line 2192
     WARNING:Xst:2404 -  FFs/Latches <ff_dip_req<7:7>> (without init value) have a constant value of 1 in block <emsx_top>.
     WARNING:Xst:2404 -  FFs/Latches <ff_dip_req<7:7>> (without init value) have a constant value of 0 in block <emsx_top>.
     WARNING:Xst:2404 -  FFs/Latches <ff_dip_req<5:5>> (without init value) have a constant value of 0 in block <emsx_top>.
@@ -1397,7 +1397,7 @@ Synthesizing Unit <VDP>.
     Found 17-bit adder for signal <VDPVRAMACCESSADDR[16]_GND_148_o_add_80_OUT> created at line 1428.
     Found 7-bit subtractor for signal <n0474> created at line 0.
     Found 7-bit subtractor for signal <n0476> created at line 0.
-    Found 4x2-bit Read Only RAM for signal <_n0704>
+    Found 4x2-bit Read Only RAM for signal <_n0710>
     Found 17-bit 4-to-1 multiplexer for signal <DOTSTATE[1]_IRAMADR[16]_wide_mux_94_OUT> created at line 1471.
     Found 17-bit 7-to-1 multiplexer for signal <DOTSTATE[1]_VDPVRAMACCESSADDR[16]_mux_101_OUT> created at line 1388.
     Found 1-bit tristate buffer for signal <PRAMDBO<7>> created at line 1302
@@ -2051,7 +2051,7 @@ WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and l
     Found 3-bit subtractor for signal <GND_204_o_GND_204_o_sub_64_OUT<2:0>> created at line 183.
     Found 6-bit subtractor for signal <GND_204_o_GND_204_o_sub_93_OUT<5:0>> created at line 312.
     Found 6-bit subtractor for signal <GND_204_o_GND_204_o_sub_94_OUT<5:0>> created at line 313.
-    Found 8-bit adder for signal <_n0350> created at line 145.
+    Found 8-bit adder for signal <_n0362> created at line 145.
     Found 8-bit subtractor for signal <GND_204_o_GND_204_o_add_40_OUT> created at line 145.
     Found 5x6-bit multiplier for signal <n0166> created at line 147.
     Found 6x6-bit multiplier for signal <n0167> created at line 148.
@@ -3638,7 +3638,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RegsL> will be implemented on LUTs e
 Unit <T80_Reg> synthesized (advanced).
 
 Synthesizing (advanced) Unit <VDP>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0704> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0710> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -3931,7 +3931,7 @@ The following registers are absorbed into counter <LogoRstCnt>: 1 register on si
 The following registers are absorbed into counter <FreeCounter>: 1 register on signal <FreeCounter>.
 The following registers are absorbed into counter <RstSeq>: 1 register on signal <RstSeq>.
 	The following adders/subtractors are grouped into adder tree <Madd_ff_psg[15]_ff_tr_pcm[15]_add_350_OUT1> :
- 	<Madd_n1541> in block <emsx_top>, 	<Madd_n1544> in block <emsx_top>, 	<Madd_ff_psg[15]_ff_tr_pcm[15]_add_350_OUT> in block <emsx_top>.
+ 	<Madd_n1545> in block <emsx_top>, 	<Madd_n1548> in block <emsx_top>, 	<Madd_ff_psg[15]_ff_tr_pcm[15]_add_350_OUT> in block <emsx_top>.
 	Multiplier <Mmult_ff_prepsg[8]_GND_8_o_MuLt_257_OUT> in block <emsx_top> and adder/subtractor <Madd_GND_8_o_GND_8_o_add_258_OUT> in block <emsx_top> are combined into a MAC<Maddsub_ff_prepsg[8]_GND_8_o_MuLt_257_OUT>.
 	Multiplier <Mmult_ff_prepsg[8]_GND_8_o_MuLt_263_OUT> in block <emsx_top> and adder/subtractor <Madd_GND_8_o_GND_8_o_add_264_OUT> in block <emsx_top> are combined into a MAC<Maddsub_ff_prepsg[8]_GND_8_o_MuLt_263_OUT>.
 	The following registers are also absorbed by the MAC: <ff_prepsg> in block <emsx_top>.
@@ -4982,19 +4982,26 @@ Found area constraint ratio of 100 (+ 5) on block unoxt2_top, actual ratio is 10
 Optimizing block <unoxt2_top> to meet ratio 100 (+ 5) of 3758 slices :
 WARNING:Xst:2254 - Area constraint could not be met for block <unoxt2_top>, final ratio is 110.
 FlipFlop msxpp/U01/u0/IR_0 has been replicated 4 time(s)
-FlipFlop msxpp/U01/u0/IR_1 has been replicated 4 time(s)
+FlipFlop msxpp/U01/u0/IR_1 has been replicated 5 time(s)
 FlipFlop msxpp/U01/u0/IR_2 has been replicated 5 time(s)
-FlipFlop msxpp/U01/u0/IR_3 has been replicated 3 time(s)
+FlipFlop msxpp/U01/u0/IR_3 has been replicated 4 time(s)
 FlipFlop msxpp/U01/u0/IR_4 has been replicated 3 time(s)
 FlipFlop msxpp/U01/u0/IR_5 has been replicated 5 time(s)
-FlipFlop msxpp/U01/u0/IR_6 has been replicated 4 time(s)
+FlipFlop msxpp/U01/u0/IR_6 has been replicated 5 time(s)
 FlipFlop msxpp/U01/u0/IR_7 has been replicated 4 time(s)
 FlipFlop msxpp/U01/u0/ISet_0 has been replicated 1 time(s)
-FlipFlop msxpp/U01/u0/MCycle_0 has been replicated 3 time(s)
-FlipFlop msxpp/U01/u0/MCycle_1 has been replicated 3 time(s)
-FlipFlop msxpp/U01/u0/MCycle_2 has been replicated 3 time(s)
-FlipFlop msxpp/iSltAdr_1 has been replicated 1 time(s)
-FlipFlop msxpp/wrt has been replicated 2 time(s)
+FlipFlop msxpp/U01/u0/MCycle_0 has been replicated 1 time(s)
+FlipFlop msxpp/U01/u0/MCycle_1 has been replicated 1 time(s)
+FlipFlop msxpp/U01/u0/MCycle_2 has been replicated 1 time(s)
+FlipFlop msxpp/wrt has been replicated 1 time(s)
+FlipFlop msxpp/iSltAdr_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop msxpp/iSltAdr_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop msxpp/iSltAdr_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop msxpp/iSltAdr_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop msxpp/iSltAdr_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop msxpp/iSltAdr_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop msxpp/iSltAdr_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop msxpp/iSltAdr_0 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -5008,8 +5015,8 @@ Unit <unoxt2_top> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 6746
- Flip-Flops                                            : 6746
+# Registers                                            : 6749
+ Flip-Flops                                            : 6749
 # Shift Registers                                      : 3
  13-bit shift register                                 : 1
  2-bit shift register                                  : 1
@@ -5036,32 +5043,32 @@ Top Level Output File Name         : unoxt2_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 15237
+# BELS                             : 15212
 #      GND                         : 1
 #      INV                         : 221
 #      LUT1                        : 176
-#      LUT2                        : 1518
-#      LUT3                        : 1685
-#      LUT4                        : 1139
-#      LUT5                        : 1596
-#      LUT6                        : 5732
+#      LUT2                        : 1515
+#      LUT3                        : 1681
+#      LUT4                        : 1122
+#      LUT5                        : 1602
+#      LUT6                        : 5725
 #      MUXCY                       : 1463
 #      MUXF7                       : 182
 #      VCC                         : 1
 #      XORCY                       : 1523
-# FlipFlops/Latches                : 6766
-#      FD                          : 319
+# FlipFlops/Latches                : 6769
+#      FD                          : 311
 #      FD_1                        : 1
 #      FDC                         : 421
-#      FDC_1                       : 9
-#      FDCE                        : 2032
+#      FDC_1                       : 8
+#      FDCE                        : 2031
 #      FDE                         : 3376
 #      FDE_1                       : 10
-#      FDP                         : 99
+#      FDP                         : 106
 #      FDP_1                       : 2
-#      FDPE                        : 255
+#      FDPE                        : 253
 #      FDR                         : 116
-#      FDRE                        : 104
+#      FDRE                        : 112
 #      FDS                         : 7
 #      FDSE                        : 10
 #      LDC                         : 5
@@ -5075,11 +5082,11 @@ Primitive and Black Box Usage:
 #      SRLC16E                     : 3
 # Clock Buffers                    : 5
 #      BUFG                        : 5
-# IO Buffers                       : 106
+# IO Buffers                       : 116
 #      IBUF                        : 2
 #      IBUFG                       : 1
 #      IOBUF                       : 18
-#      OBUF                        : 83
+#      OBUF                        : 93
 #      OBUFT                       : 2
 # DSPs                             : 6
 #      DSP48A1                     : 6
@@ -5093,23 +5100,24 @@ Selected Device : 6slx25ftg256-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            6766  out of  30064    22%  
- Number of Slice LUTs:                12162  out of  15032    80%  
-    Number used as Logic:             12067  out of  15032    80%  
+ Number of Slice Registers:            6761  out of  30064    22%  
+ Number of Slice LUTs:                12137  out of  15032    80%  
+    Number used as Logic:             12042  out of  15032    80%  
     Number used as Memory:               95  out of   3664     2%  
        Number used as RAM:               92
        Number used as SRL:                3
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  13318
-   Number with an unused Flip Flop:    6552  out of  13318    49%  
-   Number with an unused LUT:          1156  out of  13318     8%  
-   Number of fully used LUT-FF pairs:  5610  out of  13318    42%  
-   Number of unique control sets:       446
+ Number of LUT Flip Flop pairs used:  13295
+   Number with an unused Flip Flop:    6534  out of  13295    49%  
+   Number with an unused LUT:          1158  out of  13295     8%  
+   Number of fully used LUT-FF pairs:  5603  out of  13295    42%  
+   Number of unique control sets:       447
 
 IO Utilization: 
- Number of IOs:                         136
- Number of bonded IOBs:                 106  out of    186    56%  
+ Number of IOs:                         146
+ Number of bonded IOBs:                 116  out of    186    62%  
+    IOB Flip Flops/Latches:               8
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               11  out of     52    21%  
@@ -5139,9 +5147,9 @@ Clock Information:
 -------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-------+
 Clock Signal                                                                                                       | Clock buffer(FF name)                                | Load  |
 -------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-------+
-msxpp/U00/pll_base_inst/CLKOUT0                                                                                    | BUFG                                                 | 6446  |
+msxpp/U00/pll_base_inst/CLKOUT0                                                                                    | BUFG                                                 | 6452  |
 msxpp/U00/pll_base_inst/CLKOUT1                                                                                    | BUFG                                                 | 95    |
-msxpp/iCpuClk(msxpp/Mmux_iCpuClk22:O)                                                                              | BUFG(*)(msxpp/wait_n_s)                              | 296   |
+test_0_OBUF(msxpp/Mmux_iCpuClk22:O)                                                                                | BUFG(*)(msxpp/wait_n_s)                              | 293   |
 msxpp/reset_LastRst_sta_AND_2840_o(msxpp/reset_LastRst_sta_AND_2840_o1:O)                                          | NONE(*)(msxpp/portF4_bit7_LDC)                       | 1     |
 msxpp/U06/reset_Kana_AND_1197_o(msxpp/U06/reset_Kana_AND_1197_o1:O)                                                | NONE(*)(msxpp/U06/ff_led_kana_lock_LDC)              | 1     |
 msxpp/U06/reset_Caps_AND_1195_o(msxpp/U06/reset_Caps_AND_1195_o1:O)                                                | NONE(*)(msxpp/U06/ff_led_caps_lock_LDC)              | 1     |
@@ -5161,9 +5169,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 16.328ns (Maximum Frequency: 61.244MHz)
+   Minimum period: 16.888ns (Maximum Frequency: 59.214MHz)
    Minimum input arrival time before clock: 2.837ns
-   Maximum output required time after clock: 5.598ns
+   Maximum output required time after clock: 7.687ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -5172,36 +5180,35 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'msxpp/U00/pll_base_inst/CLKOUT0'
-  Clock period: 14.833ns (frequency: 67.419MHz)
-  Total number of paths / destination ports: 24914289 / 12468
+  Clock period: 16.005ns (frequency: 62.480MHz)
+  Total number of paths / destination ports: 24924817 / 12483
 -------------------------------------------------------------------------
-Delay:               7.416ns (Levels of Logic = 5)
+Delay:               8.003ns (Levels of Logic = 4)
   Source:            msxpp/wrt (FF)
-  Destination:       msxpp/iSltDat_7 (FF)
+  Destination:       msxpp/U07/reg_yea_7 (FF)
   Source Clock:      msxpp/U00/pll_base_inst/CLKOUT0 falling
   Destination Clock: msxpp/U00/pll_base_inst/CLKOUT0 rising
 
-  Data Path: msxpp/wrt to msxpp/iSltDat_7
+  Data Path: msxpp/wrt to msxpp/U07/reg_yea_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC_1:C->Q          156   0.525   2.369  msxpp/wrt (msxpp/wrt)
-     LUT6:I5->O            3   0.254   0.994  msxpp/U31_2/adr[15]_adr[15]_OR_660_o3 (msxpp/U31_2/adr[15]_adr[15]_OR_660_o3)
-     LUT6:I3->O            1   0.235   0.000  msxpp/U01/u0/mcode/Mmux_Write411_SW2_F (N1887)
-     MUXF7:I0->O           1   0.163   1.112  msxpp/U01/u0/mcode/Mmux_Write411_SW2 (N1351)
-     LUT6:I1->O           16   0.254   1.182  msxpp/pSltDat<0>LogicTrst2 (msxpp/pSltDat<0>LogicTrst2)
-     LUT4:I3->O            2   0.254   0.000  msxpp/pSltDat<0>LogicTrst4 (msxpp/pSltDat<0>)
-     FDP:D                     0.074          msxpp/iSltDat_0
+     FDC_1:C->Q          160   0.525   2.374  msxpp/wrt (msxpp/wrt)
+     LUT6:I5->O            9   0.254   0.976  msxpp/U07/_n054611 (msxpp/U07/_n05461)
+     LUT5:I4->O            8   0.254   0.944  msxpp/U07/_n0546211 (msxpp/U07/_n054621)
+     LUT6:I5->O            3   0.254   0.766  msxpp/U07/_n054621 (msxpp/U07/_n05462)
+     LUT5:I4->O            8   0.254   0.943  msxpp/U07/_n05463 (msxpp/U07/_n0546)
+     FDRE:R                    0.459          msxpp/U07/reg_yea_0
     ----------------------------------------
-    Total                      7.416ns (1.759ns logic, 5.657ns route)
-                                       (23.7% logic, 76.3% route)
+    Total                      8.003ns (2.000ns logic, 6.003ns route)
+                                       (25.0% logic, 75.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'msxpp/U00/pll_base_inst/CLKOUT1'
-  Clock period: 11.107ns (frequency: 90.033MHz)
-  Total number of paths / destination ports: 1018 / 162
+  Clock period: 11.839ns (frequency: 84.467MHz)
+  Total number of paths / destination ports: 998 / 162
 -------------------------------------------------------------------------
-Delay:               11.107ns (Levels of Logic = 9)
+Delay:               11.839ns (Levels of Logic = 9)
   Source:            msxpp/iSlt0_1 (FF)
   Destination:       msxpp/SdrSta_0 (FF)
   Source Clock:      msxpp/U00/pll_base_inst/CLKOUT1 rising
@@ -5211,31 +5218,31 @@ Delay:               11.107ns (Levels of Logic = 9)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               7   0.525   1.018  msxpp/iSlt0_1 (msxpp/iSlt0_1)
-     LUT3:I1->O            2   0.250   0.834  msxpp/Mmux_iSltMap011 (msxpp/Mmux_iSltMap01)
-     LUT6:I4->O           24   0.250   1.380  msxpp/Mmux_iSltMap015 (msxpp/iSltMap0)
-     LUT6:I5->O            5   0.254   0.841  msxpp/Mmux_MapReq11 (msxpp/MapReq)
-     LUT5:I4->O            1   0.254   0.682  msxpp/RamReq1 (msxpp/RamReq1)
-     LUT6:I5->O            1   0.254   0.682  msxpp/RamReq10 (msxpp/RamReq11)
+     FD:C->Q               7   0.525   0.910  msxpp/iSlt0_1 (msxpp/iSlt0_1)
+     LUT3:I2->O            2   0.254   1.181  msxpp/Mmux_iSltMap011 (msxpp/Mmux_iSltMap01)
+     LUT6:I0->O           24   0.254   1.380  msxpp/Mmux_iSltMap015 (msxpp/iSltMap0)
+     LUT6:I5->O            5   0.254   1.117  msxpp/Mmux_MapReq11 (msxpp/MapReq)
+     LUT5:I1->O            1   0.254   0.910  msxpp/RamReq1 (msxpp/RamReq1)
+     LUT6:I3->O            1   0.235   0.682  msxpp/RamReq10_SW0 (N1478)
      LUT6:I5->O            3   0.254   1.221  msxpp/RamReq15 (msxpp/RamReq)
      LUT6:I0->O            1   0.254   0.790  msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT13 (msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT12)
      LUT6:I4->O            1   0.250   0.790  msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT14 (msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT13)
      LUT5:I3->O            1   0.250   0.000  msxpp/Mmux_SdrSta[2]_PWR_8_o_mux_395_OUT16 (msxpp/SdrSta[2]_PWR_8_o_mux_395_OUT<0>)
      FDR:D                     0.074          msxpp/SdrSta_0
     ----------------------------------------
-    Total                     11.107ns (2.869ns logic, 8.238ns route)
-                                       (25.8% logic, 74.2% route)
+    Total                     11.839ns (2.858ns logic, 8.981ns route)
+                                       (24.1% logic, 75.9% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'msxpp/iCpuClk'
-  Clock period: 16.328ns (frequency: 61.244MHz)
-  Total number of paths / destination ports: 1871813 / 831
+Timing constraint: Default period analysis for Clock 'test_0_OBUF'
+  Clock period: 16.888ns (frequency: 59.214MHz)
+  Total number of paths / destination ports: 1856668 / 822
 -------------------------------------------------------------------------
-Delay:               8.164ns (Levels of Logic = 6)
+Delay:               8.444ns (Levels of Logic = 7)
   Source:            msxpp/U01/u0/IR_0_1 (FF)
   Destination:       msxpp/U01/DI_Reg_7 (FF)
-  Source Clock:      msxpp/iCpuClk rising
-  Destination Clock: msxpp/iCpuClk falling
+  Source Clock:      test_0_OBUF rising
+  Destination Clock: test_0_OBUF falling
 
   Data Path: msxpp/U01/u0/IR_0_1 to msxpp/U01/DI_Reg_7
                                 Gate     Net
@@ -5243,15 +5250,16 @@ Delay:               8.164ns (Levels of Logic = 6)
     ----------------------------------------  ------------
      FDCE:C->Q             1   0.525   0.910  msxpp/U01/u0/IR_0_1 (msxpp/U01/u0/IR_0_1)
      LUT3:I0->O            7   0.235   0.910  msxpp/U01/u0/mcode/_n3627<7>21 (msxpp/U01/u0/mcode/_n3627<7>2)
-     LUT6:I5->O           15   0.254   1.263  msxpp/U01/u0/mcode/_n12225<7>1 (msxpp/U01/u0/mcode/_n12225)
-     LUT6:I4->O            1   0.250   0.910  msxpp/U01/u0/mcode/Mmux_Write410_SW0_SW0 (N1358)
-     LUT6:I3->O            4   0.235   0.804  msxpp/U01/u0/mcode/Mmux_Write410 (msxpp/U01/u0/mcode/Mmux_Write49)
+     LUT6:I5->O           15   0.254   1.585  msxpp/U01/u0/mcode/_n12225<7>1 (msxpp/U01/u0/mcode/_n12225)
+     LUT6:I1->O            1   0.254   0.000  msxpp/U01/u0/mcode/Mmux_Write410_SW0_SW0_F (N1942)
+     MUXF7:I0->O           1   0.163   0.682  msxpp/U01/u0/mcode/Mmux_Write410_SW0_SW0 (N1411)
+     LUT6:I5->O            4   0.254   0.804  msxpp/U01/u0/mcode/Mmux_Write410 (msxpp/U01/u0/mcode/Mmux_Write49)
      LUT6:I5->O           16   0.254   1.290  msxpp/U01/u0/mcode/Mmux_Write411 (msxpp/U01/Write)
      LUT4:I2->O            2   0.250   0.000  msxpp/pSltDat<0>LogicTrst4 (msxpp/pSltDat<0>)
      FDE_1:D                   0.074          msxpp/U01/DI_Reg_0
     ----------------------------------------
-    Total                      8.164ns (2.077ns logic, 6.087ns route)
-                                       (25.4% logic, 74.6% route)
+    Total                      8.444ns (2.263ns logic, 6.181ns route)
+                                       (26.8% logic, 73.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'msxpp/U00/pll_base_inst/CLKOUT1'
@@ -5295,43 +5303,44 @@ Offset:              2.837ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'msxpp/U00/pll_base_inst/CLKOUT0'
-  Total number of paths / destination ports: 30 / 26
+  Total number of paths / destination ports: 44 / 35
 -------------------------------------------------------------------------
-Offset:              5.138ns (Levels of Logic = 2)
-  Source:            msxpp/U06/ff_ps2_sub_state[4]_clk21m_DFF_300 (FF)
-  Destination:       ps2_data_io (PAD)
+Offset:              6.945ns (Levels of Logic = 3)
+  Source:            msxpp/clkdiv_0 (FF)
+  Destination:       test<0> (PAD)
   Source Clock:      msxpp/U00/pll_base_inst/CLKOUT0 rising
 
-  Data Path: msxpp/U06/ff_ps2_sub_state[4]_clk21m_DFF_300 to ps2_data_io
+  Data Path: msxpp/clkdiv_0 to test<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.525   0.765  msxpp/U06/ff_ps2_sub_state[4]_clk21m_DFF_300 (msxpp/U06/ff_ps2_sub_state[4]_clk21m_DFF_300)
-     INV:I->O              1   0.255   0.681  msxpp/U06/ff_ps2_sub_state[4]_clk21m_DFF_300_inv1_INV_0 (msxpp/U06/ff_ps2_sub_state[4]_clk21m_DFF_300_inv)
-     IOBUF:T->IO               2.912          ps2_data_io_IOBUF (ps2_data_io)
+     FDC:C->Q             39   0.525   1.637  msxpp/clkdiv_0 (msxpp/clkdiv_0)
+     LUT5:I4->O            1   0.254   0.682  msxpp/Mmux_iCpuClk21 (msxpp/Mmux_iCpuClk2)
+     LUT4:I3->O            1   0.254   0.681  msxpp/Mmux_iCpuClk22 (test_0_OBUF)
+     OBUF:I->O                 2.912          test_0_OBUF (test<0>)
     ----------------------------------------
-    Total                      5.138ns (3.692ns logic, 1.446ns route)
-                                       (71.9% logic, 28.1% route)
+    Total                      6.945ns (3.945ns logic, 3.000ns route)
+                                       (56.8% logic, 43.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'msxpp/U00/pll_base_inst/CLKOUT1'
-  Total number of paths / destination ports: 51 / 35
+  Total number of paths / destination ports: 53 / 36
 -------------------------------------------------------------------------
-Offset:              5.598ns (Levels of Logic = 2)
-  Source:            msxpp/ff_sdr_seq[2]_memclk_DFF_182 (FF)
-  Destination:       sdram_data<15> (PAD)
+Offset:              7.687ns (Levels of Logic = 2)
+  Source:            msxpp/reset (FF)
+  Destination:       test<0> (PAD)
   Source Clock:      msxpp/U00/pll_base_inst/CLKOUT1 rising
 
-  Data Path: msxpp/ff_sdr_seq[2]_memclk_DFF_182 to sdram_data<15>
+  Data Path: msxpp/reset to test<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.525   0.725  msxpp/ff_sdr_seq[2]_memclk_DFF_182 (msxpp/ff_sdr_seq[2]_memclk_DFF_182)
-     INV:I->O             16   0.255   1.181  msxpp/ff_sdr_seq[2]_memclk_DFF_181_inv1_INV_0 (msxpp/ff_sdr_seq[2]_memclk_DFF_181_inv)
-     IOBUF:T->IO               2.912          sdram_data_15_IOBUF (sdram_data<15>)
+     FD:C->Q            2566   0.525   3.315  msxpp/reset (msxpp/reset)
+     LUT4:I0->O            1   0.254   0.681  msxpp/Mmux_iCpuClk22 (test_0_OBUF)
+     OBUF:I->O                 2.912          test_0_OBUF (test<0>)
     ----------------------------------------
-    Total                      5.598ns (3.692ns logic, 1.906ns route)
-                                       (66.0% logic, 34.0% route)
+    Total                      7.687ns (3.691ns logic, 3.996ns route)
+                                       (48.0% logic, 52.0% route)
 
 =========================================================================
 
@@ -5343,14 +5352,14 @@ Clock to Setup on destination clock msxpp/U00/pll_base_inst/CLKOUT0
                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------------------------------+---------+---------+---------+---------+
-msxpp/U00/pll_base_inst/CLKOUT0                        |   14.300|    7.416|    7.240|         |
-msxpp/U00/pll_base_inst/CLKOUT1                        |   10.245|         |    5.411|         |
+msxpp/U00/pll_base_inst/CLKOUT0                        |   14.300|    8.003|    7.219|         |
+msxpp/U00/pll_base_inst/CLKOUT1                        |   10.247|         |    4.371|         |
 msxpp/U06/reset_Caps_AND_1195_o                        |         |    6.368|         |         |
 msxpp/U06/reset_CmtScro_AND_1199_o                     |         |    6.331|         |         |
 msxpp/U06/reset_Kana_AND_1197_o                        |         |    7.058|         |         |
 msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o|         |   10.402|         |         |
-msxpp/iCpuClk                                          |    8.164|    6.096|    2.741|         |
 msxpp/reset_LastRst_sta_AND_2840_o                     |         |    7.119|         |         |
+test_0_OBUF                                            |    8.444|    6.071|    2.741|         |
 -------------------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock msxpp/U00/pll_base_inst/CLKOUT1
@@ -5358,8 +5367,8 @@ Clock to Setup on destination clock msxpp/U00/pll_base_inst/CLKOUT1
                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
-msxpp/U00/pll_base_inst/CLKOUT0|   14.395|    9.025|         |         |
-msxpp/U00/pll_base_inst/CLKOUT1|   11.107|         |         |         |
+msxpp/U00/pll_base_inst/CLKOUT0|   15.092|    9.712|         |         |
+msxpp/U00/pll_base_inst/CLKOUT1|   11.839|         |         |         |
 -------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock msxpp/U06/reset_Caps_AND_1195_o
@@ -5368,7 +5377,7 @@ Clock to Setup on destination clock msxpp/U06/reset_Caps_AND_1195_o
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
 msxpp/U00/pll_base_inst/CLKOUT0|         |         |    3.011|         |
-msxpp/U00/pll_base_inst/CLKOUT1|         |         |    5.000|         |
+msxpp/U00/pll_base_inst/CLKOUT1|         |         |    5.002|         |
 -------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock msxpp/U06/reset_CmtScro_AND_1199_o
@@ -5377,7 +5386,7 @@ Clock to Setup on destination clock msxpp/U06/reset_CmtScro_AND_1199_o
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
 msxpp/U00/pll_base_inst/CLKOUT0|         |         |    3.075|         |
-msxpp/U00/pll_base_inst/CLKOUT1|         |         |    5.000|         |
+msxpp/U00/pll_base_inst/CLKOUT1|         |         |    5.002|         |
 -------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock msxpp/U06/reset_Kana_AND_1197_o
@@ -5386,7 +5395,7 @@ Clock to Setup on destination clock msxpp/U06/reset_Kana_AND_1197_o
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
 msxpp/U00/pll_base_inst/CLKOUT0|         |         |    2.943|         |
-msxpp/U00/pll_base_inst/CLKOUT1|         |         |    5.000|         |
+msxpp/U00/pll_base_inst/CLKOUT1|         |         |    5.002|         |
 -------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE_AND_1518_o
@@ -5395,17 +5404,7 @@ Clock to Setup on destination clock msxpp/U20/U_VDP_REGISTER/RESET_FORCED_V_MODE
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
 msxpp/U00/pll_base_inst/CLKOUT0|         |         |    3.249|         |
-msxpp/U00/pll_base_inst/CLKOUT1|         |         |    5.000|         |
--------------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock msxpp/iCpuClk
--------------------------------+---------+---------+---------+---------+
-                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------+---------+---------+---------+---------+
-msxpp/U00/pll_base_inst/CLKOUT0|   11.181|    7.416|   11.286|         |
-msxpp/U00/pll_base_inst/CLKOUT1|    5.448|         |    5.553|         |
-msxpp/iCpuClk                  |   14.834|    6.901|    8.164|         |
+msxpp/U00/pll_base_inst/CLKOUT1|         |         |    5.002|         |
 -------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock msxpp/reset_LastRst_sta_AND_2840_o
@@ -5414,19 +5413,29 @@ Clock to Setup on destination clock msxpp/reset_LastRst_sta_AND_2840_o
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
 msxpp/U00/pll_base_inst/CLKOUT0|         |         |    2.804|         |
-msxpp/U00/pll_base_inst/CLKOUT1|         |         |    5.104|         |
+msxpp/U00/pll_base_inst/CLKOUT1|         |         |    5.106|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock test_0_OBUF
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+msxpp/U00/pll_base_inst/CLKOUT0|   11.514|    7.459|   11.293|         |
+msxpp/U00/pll_base_inst/CLKOUT1|    5.774|         |    5.553|         |
+test_0_OBUF                    |   15.292|    6.885|    8.444|         |
 -------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 59.00 secs
-Total CPU time to Xst completion: 52.34 secs
+Total REAL time to Xst completion: 57.00 secs
+Total CPU time to Xst completion: 50.73 secs
  
 --> 
 
 
-Total memory usage is 649672 kilobytes
+Total memory usage is 553512 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  500 (   0 filtered)

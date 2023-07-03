@@ -5,28 +5,28 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2644: Actual for formal port <arg fmt="%s" index="1">reset_n</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2654: Actual for formal port <arg fmt="%s" index="1">reset_n</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2728: Actual for formal port <arg fmt="%s" index="1">vdpspeedmode</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2742: Actual for formal port <arg fmt="%s" index="1">vdpspeedmode</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2774: Actual for formal port <arg fmt="%s" index="1">reset</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2788: Actual for formal port <arg fmt="%s" index="1">reset</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2789: Actual for formal port <arg fmt="%s" index="1">reset</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2803: Actual for formal port <arg fmt="%s" index="1">reset</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2797: Actual for formal port <arg fmt="%s" index="1">reset</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 2811: Actual for formal port <arg fmt="%s" index="1">reset</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="871" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 1019: Using initial value <arg fmt="%s" index="1">&quot;11111111&quot;</arg> for <arg fmt="%s" index="2">esp_dout_s</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 1023: Using initial value <arg fmt="%s" index="1">&quot;11111111&quot;</arg> for <arg fmt="%s" index="2">esp_dout_s</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="871" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 1020: Using initial value <arg fmt="%s" index="1">&apos;1&apos;</arg> for <arg fmt="%s" index="2">esp_wait_s</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 1024: Using initial value <arg fmt="%s" index="1">&apos;1&apos;</arg> for <arg fmt="%s" index="2">esp_wait_s</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="871" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 1027: Using initial value <arg fmt="%s" index="1">&quot;11111111&quot;</arg> for <arg fmt="%s" index="2">midi_dout_s</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 1031: Using initial value <arg fmt="%s" index="1">&quot;11111111&quot;</arg> for <arg fmt="%s" index="2">midi_dout_s</arg> since it is never assigned
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/ise/ipcore_dir/pll4x.v" Line 124: Assignment to <arg fmt="%s" index="1">clkout3_unused</arg> ignored, since the identifier is never used
@@ -47,16 +47,16 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/peripheral/eseps2.v" Line 657: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="439" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 277: Formal port <arg fmt="%s" index="1">fkeys</arg> of mode <arg fmt="%s" index="2">out</arg> cannot be associated with actual port <arg fmt="%s" index="3">fkeys</arg> of mode <arg fmt="%s" index="4">buffer</arg>
+<msg type="warning" file="HDLCompiler" num="439" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 281: Formal port <arg fmt="%s" index="1">fkeys</arg> of mode <arg fmt="%s" index="2">out</arg> cannot be associated with actual port <arg fmt="%s" index="3">fkeys</arg> of mode <arg fmt="%s" index="4">buffer</arg>
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="439" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 611: Formal port <arg fmt="%s" index="1">mapper0_ack</arg> of mode <arg fmt="%s" index="2">inout</arg> cannot be associated with actual port <arg fmt="%s" index="3">mapper0_ack</arg> of mode <arg fmt="%s" index="4">out</arg>
+<msg type="warning" file="HDLCompiler" num="439" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 615: Formal port <arg fmt="%s" index="1">mapper0_ack</arg> of mode <arg fmt="%s" index="2">inout</arg> cannot be associated with actual port <arg fmt="%s" index="3">mapper0_ack</arg> of mode <arg fmt="%s" index="4">out</arg>
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 808: Net &lt;<arg fmt="%s" index="1">EPC_DO</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd" Line 812: Net &lt;<arg fmt="%s" index="1">EPC_DO</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/src/unoxt_top.v" Line 226: Assignment to <arg fmt="%s" index="1">joy1</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/src/unoxt_top.v" Line 228: Assignment to <arg fmt="%s" index="1">joy1</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/ise/share/git/unoxt-ocm-pld-dev/unoxt/src/unoxt_top.v" Line 153: Input port <arg fmt="%s" index="1">pExtClk</arg> is not connected on this instance
@@ -194,70 +194,70 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">pIopRsv21</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2642</arg>: Output port &lt;<arg fmt="%s" index="3">HALT_n</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U01</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2652</arg>: Output port &lt;<arg fmt="%s" index="3">HALT_n</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U01</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2642</arg>: Output port &lt;<arg fmt="%s" index="3">BUSAK_n</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U01</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2652</arg>: Output port &lt;<arg fmt="%s" index="3">BUSAK_n</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U01</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2666</arg>: Output port &lt;<arg fmt="%s" index="3">debug</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U03</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2680</arg>: Output port &lt;<arg fmt="%s" index="3">debug</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U03</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2666</arg>: Output port &lt;<arg fmt="%s" index="3">epc_ck</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U03</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2680</arg>: Output port &lt;<arg fmt="%s" index="3">epc_ck</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U03</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2666</arg>: Output port &lt;<arg fmt="%s" index="3">epc_cs</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U03</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2680</arg>: Output port &lt;<arg fmt="%s" index="3">epc_cs</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U03</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2666</arg>: Output port &lt;<arg fmt="%s" index="3">epc_oe</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U03</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2680</arg>: Output port &lt;<arg fmt="%s" index="3">epc_oe</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U03</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2666</arg>: Output port &lt;<arg fmt="%s" index="3">epc_di</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U03</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2680</arg>: Output port &lt;<arg fmt="%s" index="3">epc_di</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U03</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2705</arg>: Output port &lt;<arg fmt="%s" index="3">ramdbo</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U05</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2719</arg>: Output port &lt;<arg fmt="%s" index="3">ramdbo</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U05</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2705</arg>: Output port &lt;<arg fmt="%s" index="3">ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U05</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2719</arg>: Output port &lt;<arg fmt="%s" index="3">ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U05</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2713</arg>: Output port &lt;<arg fmt="%s" index="3">ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U07</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2727</arg>: Output port &lt;<arg fmt="%s" index="3">ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U07</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2716</arg>: Output port &lt;<arg fmt="%s" index="3">ramdbo</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U08</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2730</arg>: Output port &lt;<arg fmt="%s" index="3">ramdbo</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U08</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2716</arg>: Output port &lt;<arg fmt="%s" index="3">ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U08</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2730</arg>: Output port &lt;<arg fmt="%s" index="3">ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U08</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2720</arg>: Output port &lt;<arg fmt="%s" index="3">ACK</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U20</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2734</arg>: Output port &lt;<arg fmt="%s" index="3">ACK</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U20</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2720</arg>: Output port &lt;<arg fmt="%s" index="3">PRAMOE_N</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U20</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2734</arg>: Output port &lt;<arg fmt="%s" index="3">PRAMOE_N</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U20</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2720</arg>: Output port &lt;<arg fmt="%s" index="3">BLANK_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U20</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2734</arg>: Output port &lt;<arg fmt="%s" index="3">BLANK_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U20</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2736</arg>: Output port &lt;<arg fmt="%s" index="3">ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U30</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2750</arg>: Output port &lt;<arg fmt="%s" index="3">ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U30</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2740</arg>: Output port &lt;<arg fmt="%s" index="3">ramdbo</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U31_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2754</arg>: Output port &lt;<arg fmt="%s" index="3">ramdbo</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U31_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2740</arg>: Output port &lt;<arg fmt="%s" index="3">wavr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U31_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2754</arg>: Output port &lt;<arg fmt="%s" index="3">wavr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U31_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2746</arg>: Output port &lt;<arg fmt="%s" index="3">ramdbo</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U31_2</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2760</arg>: Output port &lt;<arg fmt="%s" index="3">ramdbo</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U31_2</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2746</arg>: Output port &lt;<arg fmt="%s" index="3">wavr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U31_2</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2760</arg>: Output port &lt;<arg fmt="%s" index="3">wavr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U31_2</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2811</arg>: Output port &lt;<arg fmt="%s" index="3">ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U35</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2825</arg>: Output port &lt;<arg fmt="%s" index="3">ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U35</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2898</arg>: Output port &lt;<arg fmt="%s" index="3">ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U40</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/share/git/unoxt-ocm-pld-dev/esemsx3/src/emsx_top.vhd</arg>&quot; line <arg fmt="%s" index="2">2912</arg>: Output port &lt;<arg fmt="%s" index="3">ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U40</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">pUsbN1</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">emsx_top</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">z</arg>).
@@ -857,7 +857,7 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_RegsL</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0704</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0710</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
 <msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_BUF_BO/Mram_IMEM</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>

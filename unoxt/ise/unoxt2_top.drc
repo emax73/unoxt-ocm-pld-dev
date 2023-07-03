@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Jul  2 12:22:29 2023
+Sun Jul  2 18:37:09 2023
 
 drc -z unoxt2_top.ncd unoxt2_top.pcf
 
@@ -32,6 +32,21 @@ WARNING:PhysDesignRules:367 - The signal
    <msxpp/U20/U_SPRITE/ISPINFORAM/Mram_IMEM5_RAMD_D1_O> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
+   <msxpp/U20/U_SPRITE/ISPINFORAM/Mram_IMEM4_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <msxpp/U01/u0/Regs/Mram_RegsH11_RAMD_D1_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <msxpp/U20/U_SPRITE/ISPINFORAM/Mram_IMEM3_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <msxpp/U20/U_SPRITE/ISPINFORAM/Mram_IMEM2_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <msxpp/U01/u0/Regs/Mram_RegsL11_RAMD_D1_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
    <msxpp/U32/U1/og/Fmem/Mram_data_array10_RAMA_DPO> is incomplete. The signal
    does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
@@ -40,21 +55,6 @@ WARNING:PhysDesignRules:367 - The signal
 WARNING:PhysDesignRules:367 - The signal
    <msxpp/U32/U1/og/Fmem/Mram_data_array10_RAMD_O> is incomplete. The signal
    does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <msxpp/U01/u0/Regs/Mram_RegsL11_RAMD_D1_O> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <msxpp/U20/U_SPRITE/ISPINFORAM/Mram_IMEM2_RAMD_D1_O> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <msxpp/U20/U_SPRITE/ISPINFORAM/Mram_IMEM4_RAMD_D1_O> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <msxpp/U20/U_SPRITE/ISPINFORAM/Mram_IMEM3_RAMD_D1_O> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <msxpp/U01/u0/Regs/Mram_RegsH11_RAMD_D1_O> is incomplete. The signal does not
-   drive any load pins in the design.
 WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
    (RAMB8BWER).  9K Block RAM initialization data, both user defined and
    default, may be incorrect and should not be used.  For more information,

@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Jul  2 12:22:11 2023
+Sun Jul  2 18:36:53 2023
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -227,7 +227,7 @@ Pinout by Pin Number:
 |N13       |                 |         |GND                          |         |           |              |          |         |           |         |       |          |           |                |
 |N14       |                 |IOBM     |IO_L45P_A1_M1LDQS_1          |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
 |N15       |                 |         |VCCO_1                       |         |           |1             |          |         |           |         |3.30   |          |           |                |
-|N16       |                 |IOBS     |IO_L45N_A0_M1LDQSN_1         |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|N16       |test<8>          |IOB      |IO_L45N_A0_M1LDQSN_1         |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
 |P1        |ram_addr_o<16>   |IOB      |IO_L33N_M3DQ13_3             |OUTPUT   |LVCMOS33   |3             |4         |FAST     |           |         |       |LOCATED   |NO         |NONE            |
 |P2        |ram_addr_o<15>   |IOB      |IO_L33P_M3DQ12_3             |OUTPUT   |LVCMOS33   |3             |4         |FAST     |           |         |       |LOCATED   |NO         |NONE            |
 |P3        |                 |         |GND                          |         |           |              |          |         |           |         |       |          |           |                |
@@ -242,8 +242,8 @@ Pinout by Pin Number:
 |P12       |flash_hold_o     |IOB      |IO_L12N_D2_MISO3_2           |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P13       |                 |         |DONE_2                       |         |           |              |          |         |           |         |       |          |           |                |
 |P14       |                 |         |SUSPEND                      |         |           |              |          |         |           |         |       |          |           |                |
-|P15       |                 |IOBM     |IO_L48P_HDC_M1DQ8_1          |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
-|P16       |                 |IOBS     |IO_L48N_M1DQ9_1              |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P15       |test<6>          |IOB      |IO_L48P_HDC_M1DQ8_1          |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
+|P16       |test<9>          |IOB      |IO_L48N_M1DQ9_1              |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |R1        |ps2_pin2_io      |IOB      |IO_L32N_M3DQ15_3             |INPUT    |LVCMOS33   |3             |          |         |PULLUP     |NONE     |       |LOCATED   |NO         |NONE            |
 |R2        |ps2_clk_io       |IOB      |IO_L32P_M3DQ14_3             |BIDIR    |LVCMOS33   |3             |24        |SLOW     |PULLUP     |NONE     |       |LOCATED   |NO         |NONE            |
 |R3        |                 |IOBM     |IO_L65P_INIT_B_2             |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
@@ -257,9 +257,9 @@ Pinout by Pin Number:
 |R11       |flash_sclk_o     |IOB      |IO_L1P_CCLK_2                |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |R12       |sdram_addr<4>    |IOB      |IO_L52P_M1DQ14_1             |OUTPUT   |LVCMOS33   |1             |4         |FAST     |           |         |       |LOCATED   |NO         |NONE            |
 |R13       |                 |         |VCCO_1                       |         |           |1             |          |         |           |         |3.30   |          |           |                |
-|R14       |                 |IOBM     |IO_L50P_M1UDQS_1             |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
-|R15       |                 |IOBM     |IO_L49P_M1DQ10_1             |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
-|R16       |                 |IOBS     |IO_L49N_M1DQ11_1             |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|R14       |test<2>          |IOB      |IO_L50P_M1UDQS_1             |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
+|R15       |test<4>          |IOB      |IO_L49P_M1DQ10_1             |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
+|R16       |test<7>          |IOB      |IO_L49N_M1DQ11_1             |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
 |T1        |                 |         |GND                          |         |           |              |          |         |           |         |       |          |           |                |
 |T2        |                 |         |PROGRAM_B_2                  |         |           |              |          |         |           |         |       |          |           |                |
 |T3        |flash_cs_n_o     |IOB      |IO_L65N_CSO_B_2              |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
@@ -271,10 +271,10 @@ Pinout by Pin Number:
 |T9        |                 |IOBS     |IO_L23N_2                    |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
 |T10       |flash_mosi_o     |IOB      |IO_L3N_MOSI_CSI_B_MISO0_2    |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |T11       |                 |IOBS     |IO_L1N_M0_CMPMISO_2          |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
-|T12       |                 |IOBS     |IO_L52N_M1DQ15_1             |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
-|T13       |                 |IOBS     |IO_L51N_M1DQ13_1             |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
-|T14       |                 |IOBM     |IO_L51P_M1DQ12_1             |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
-|T15       |                 |IOBS     |IO_L50N_M1UDQSN_1            |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|T12       |test<1>          |IOB      |IO_L52N_M1DQ15_1             |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
+|T13       |test<0>          |IOB      |IO_L51N_M1DQ13_1             |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
+|T14       |test<3>          |IOB      |IO_L51P_M1DQ12_1             |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
+|T15       |test<5>          |IOB      |IO_L50N_M1UDQSN_1            |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |YES        |NONE            |
 |T16       |                 |         |GND                          |         |           |              |          |         |           |         |       |          |           |                |
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 

@@ -184,20 +184,22 @@ NET sdram_ldqm        LOC="G16"  | IOSTANDARD = LVCMOS33 |DRIVE = 4 |SLEW = "FAS
 NET sdram_udqm        LOC="L16"  | IOSTANDARD = LVCMOS33 |DRIVE = 4 |SLEW = "FAST" |NODELAY;
 NET sdram_clk         LOC="P8"  | IOSTANDARD = LVCMOS33 |DRIVE = 4 |SLEW = "FAST" |NODELAY;
 
-#NET "test<0>"           LOC="T13"   |IOSTANDARD = LVTTL;
-#NET "test<1>"           LOC="T12"   |IOSTANDARD = LVTTL;
-#NET "test<2>"           LOC="R14"   |IOSTANDARD = LVTTL;
-#NET "test<3>"           LOC="T14"   |IOSTANDARD = LVTTL;
-#NET "test<4>"           LOC="R15"   |IOSTANDARD = LVTTL;
-#NET "test<5>"           LOC="T15"   |IOSTANDARD = LVTTL;
-#NET "test<6>"           LOC="P15"   |IOSTANDARD = LVTTL;
-#NET "test<7>"           LOC="R16"   |IOSTANDARD = LVTTL;
-#NET "test<8>"           LOC="N16"   |IOSTANDARD = LVTTL;
+NET "test<0>"           LOC="T13"   |IOSTANDARD = LVTTL;
+NET "test<1>"           LOC="T12"   |IOSTANDARD = LVTTL;
+NET "test<2>"           LOC="R14"   |IOSTANDARD = LVTTL;
+NET "test<3>"           LOC="T14"   |IOSTANDARD = LVTTL;
+NET "test<4>"           LOC="R15"   |IOSTANDARD = LVTTL;
+NET "test<5>"           LOC="T15"   |IOSTANDARD = LVTTL;
+NET "test<6>"           LOC="P15"   |IOSTANDARD = LVTTL;
+NET "test<7>"           LOC="R16"   |IOSTANDARD = LVTTL;
+NET "test<8>"           LOC="N16"   |IOSTANDARD = LVTTL;
+NET "test<9>"           LOC="P16"   |IOSTANDARD = LVTTL;
 
 # Timings
 # Timing constraints
 NET "clock_50_i" TNM_NET = "clock_50_i";
 TIMESPEC TS_clk50 = PERIOD "clock_50_i" 20ns HIGH 50%;
 
+PIN "msxpp/U00/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
 PIN "msxpp/U00/clkout3_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
 #PIN "msx3/relojes/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;

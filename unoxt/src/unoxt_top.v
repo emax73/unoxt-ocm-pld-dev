@@ -105,11 +105,11 @@
    inout wire [15:0] sdram_data,
  	output wire sdram_ldqm,
  	output wire sdram_udqm,
- 	output wire sdram_clk
+ 	output wire sdram_clk,
 
 `endif
 
-   //output wire [8:0] test
+   output wire [9:0] test
 
    );
    
@@ -209,7 +209,9 @@
       //.pDac_SR         : inout std_logic_vector(  5 downto 0 ) := "ZZZZZZ";    -- Sound-R / CMT
 
       .pVideoHS_n(hsync_o),		// Csync(RGB15K), HSync(VGA31K)
-      .pVideoVS_n(vsync_o)			// Audio(RGB15K), VSync(VGA31K)
+      .pVideoVS_n(vsync_o),		// Audio(RGB15K), VSync(VGA31K)
+		
+		.pTest(test)
 );
 
 	assign dips = {1'b0,1'b1,2'b01,1'b0,2'b10,1'b0};// 8=Mega_Sd / 7=Interal_Mapper / 6:5=Slot2 / 4=Slot1 / 3:2=Video (No se usa) / 1:Turbo-- 0=On,    1=Off (default on shipment)

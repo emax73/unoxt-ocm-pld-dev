@@ -147,7 +147,11 @@ entity emsx_top is
         pIopRsv18       : in    std_logic;
         pIopRsv19       : in    std_logic;
         pIopRsv20       : in    std_logic;
-        pIopRsv21       : in    std_logic
+        pIopRsv21       : in    std_logic;
+		  
+		  --Max
+		  pTest        	: out std_logic_vector( 9 downto 0 )
+
     );
 end emsx_top;
 
@@ -1203,6 +1207,9 @@ begin
                 clkdiv(1)   when( ff_clksel5m_n = '0' )else                             --  5.37MHz
                 cpuclk;                                                                 --  3.58MHz
 
+	 --Max 
+	 pTest(0) <= iCpuClk;	
+
     -- clock assignment of external slots
     pCpuClk <=  '1'         when( power_on_reset = '0' )else
                 rtcclk      when( reset = '1' )else                                     --  3.58MHz
@@ -1954,6 +1961,9 @@ begin
                     '0';
     iSltBot     <=  mem when( (w_prislt_dec(3) and w_expslt3_dec(3) and (w_page_dec(0) or w_page_dec(3)) and (not ff_ldbios_n)) = '1'           )else   -- 3-3 (0000-3FFFh & C000-FFFFh)     1 kB  IPL-ROM (pre-boot state)
                     '0';
+	 --Max
+	 --pTest(0) <= iSltBot;	
+	 
     -- I/O
     rom_kanj    <=  not mem     when( adr(7 downto 2) = "110110" )else
                     '0';
@@ -2662,6 +2672,10 @@ begin
 
     U02 : iplrom
         port map(clk21m, adr, RomDbi);
+		  
+	 --Max
+	 pTest(8 downto 1) <= adr(7 downto 0);
+	 pTest(9) <= clk21m;
 
     U03 : megasd
         port map(
